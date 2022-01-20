@@ -146,9 +146,12 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4Transform3D.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Tubs.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Tubs.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UAdapter.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UBox.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UTubs.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VGraphicsScene.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VPhysicalVolume.hh

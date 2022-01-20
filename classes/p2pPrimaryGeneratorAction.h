@@ -1,10 +1,3 @@
-/*
- * p2pPrimaryGeneratorAction.h
- *
- *  Created on: Jan 20, 2022
- *      Author: local1
- */
-
 #ifndef CLASSES_P2PPRIMARYGENERATORACTION_H_
 #define CLASSES_P2PPRIMARYGENERATORACTION_H_
 

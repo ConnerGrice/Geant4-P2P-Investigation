@@ -25,7 +25,8 @@
 #/vis/geometry/set/visibility Detector 0 false
 
 #Draws detector as smooth surface
-/vis/viewer/set/style wireframe
+/vis/viewer/set/style smooth
+#wireframe
 
 /vis/viewer/set/autoRefresh true
 /vis/verbose warnings

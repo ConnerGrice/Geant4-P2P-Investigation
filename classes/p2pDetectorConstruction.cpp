@@ -7,6 +7,8 @@
 #include <G4VPhysicalVolume.hh>
 #include <G4PVPlacement.hh>
 #include <G4ThreeVector.hh>
+#include <G4Tubs.hh>
+#include <G4RotationMatrix.hh>
 
 p2pDetectorConstruction::p2pDetectorConstruction() {
 
@@ -23,14 +25,14 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	//Defines some materials
 	G4Material* worldMat = nist->FindOrBuildMaterial("G4_Galactic");
-	G4Material* detectorMat = nist->FindOrBuildMaterial("G4_Ag");
+	G4Material* detectorMat = nist->FindOrBuildMaterial("G4_Si");
 
 	G4bool checkOverlaps = true;
 
 	//WOrld
-	G4double worldx = 50*cm;
-	G4double worldy = 50*cm;
-	G4double worldz = 50*cm;
+	G4double worldx = 100*cm;
+	G4double worldy = 100*cm;
+	G4double worldz = 100*cm;
 
 	G4Box* solidWorld = new G4Box("World",worldx,worldy,worldz);
 	G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld,worldMat,"World");
@@ -43,24 +45,49 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 														0,
 														checkOverlaps);
 
-	//Stand in object
-	G4double objx = 10*cm;
-	G4double objy = 20*cm;
-	G4double objz = 30*cm;
+	//inner detector
+	G4int numSeg = 4;
+	G4int numRow = 4;
+	G4double len = 50*cm;
 
-	G4RotationMatrix* rot = new G4RotationMatrix();
-	rot->rotateX(45*deg);
+	G4double innMin = 19*cm;
+	G4double innMax = 20*cm;
+	G4double innHHight = (len/(2*numRow))*cm;
+	G4double innStart = 0;
+	G4double innEnd = (2*M_PI)/numSeg;
+	G4ThreeVector trans;
 
-	G4Box* solidObj = new G4Box("Object",objx,objy,objz);
-	G4LogicalVolume* logicObj = new G4LogicalVolume(solidObj,detectorMat,"Object");
-	G4VPhysicalVolume* physicalObj = new G4PVPlacement(rot,
-											G4ThreeVector(0,10*cm,0),
-											logicObj,
-											"Object",
-											logicWorld,
-											false,
-											1,
-											checkOverlaps);
+	G4Tubs* solidInn = new G4Tubs("Inner",innMin,innMax,innHHight,innStart,innEnd);
+	G4LogicalVolume* logicInn = new G4LogicalVolume(solidInn,detectorMat,"Inner");
+
+	for(G4int j=0;j<numRow;j++){
+		for(G4int i=0;i<numSeg;i++){
+			G4RotationMatrix* rot = new G4RotationMatrix();
+			rot->rotateZ(i*innEnd);
+			trans = G4ThreeVector(0,0,j*(len/numRow)-len);
+
+			new G4PVPlacement(
+							rot,
+							trans,
+							logicInn,
+							"Inner",
+							logicWorld,
+							false,
+							i*j,
+							checkOverlaps);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
 	return physicalWorld;
 }
 
