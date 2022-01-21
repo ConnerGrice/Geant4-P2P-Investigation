@@ -250,6 +250,33 @@ classes/p2pPrimaryGeneratorAction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.s
 .PHONY : classes/p2pPrimaryGeneratorAction.cpp.s
 
+classes/p2pSensitiveDetector.o: classes/p2pSensitiveDetector.cpp.o
+
+.PHONY : classes/p2pSensitiveDetector.o
+
+# target to build an object file
+classes/p2pSensitiveDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
+.PHONY : classes/p2pSensitiveDetector.cpp.o
+
+classes/p2pSensitiveDetector.i: classes/p2pSensitiveDetector.cpp.i
+
+.PHONY : classes/p2pSensitiveDetector.i
+
+# target to preprocess a source file
+classes/p2pSensitiveDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.i
+.PHONY : classes/p2pSensitiveDetector.cpp.i
+
+classes/p2pSensitiveDetector.s: classes/p2pSensitiveDetector.cpp.s
+
+.PHONY : classes/p2pSensitiveDetector.s
+
+# target to generate assembly for a file
+classes/p2pSensitiveDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.s
+.PHONY : classes/p2pSensitiveDetector.cpp.s
+
 p2p.o: p2p.cpp.o
 
 .PHONY : p2p.o
@@ -298,6 +325,9 @@ help:
 	@echo "... classes/p2pPrimaryGeneratorAction.o"
 	@echo "... classes/p2pPrimaryGeneratorAction.i"
 	@echo "... classes/p2pPrimaryGeneratorAction.s"
+	@echo "... classes/p2pSensitiveDetector.o"
+	@echo "... classes/p2pSensitiveDetector.i"
+	@echo "... classes/p2pSensitiveDetector.s"
 	@echo "... p2p.o"
 	@echo "... p2p.i"
 	@echo "... p2p.s"

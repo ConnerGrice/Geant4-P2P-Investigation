@@ -9,6 +9,10 @@ public:
 	p2pDetectorConstruction();
 	virtual ~p2pDetectorConstruction();
 	virtual G4VPhysicalVolume* Construct();
+private:
+	G4LogicalVolume* logicInn;
+	G4LogicalVolume* logicOut;
+	virtual void ConstructSDandField();
 };
 
 #endif /* CLASSES_P2PDETECTORCONSTRUCTION_H_ */

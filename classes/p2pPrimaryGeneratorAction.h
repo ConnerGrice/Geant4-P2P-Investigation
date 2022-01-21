@@ -14,8 +14,8 @@ public:
 	p2pPrimaryGeneratorAction(
 						const G4String& particleName = "alpha",
 						G4double energy = 300*MeV,
-						G4ThreeVector position = G4ThreeVector(-10*cm,0,0),
-						G4ParticleMomentum momentumDir = G4ParticleMomentum(1,0,0));
+						G4ThreeVector position = G4ThreeVector(0,0,-25*cm),
+						G4ParticleMomentum momentumDir = G4ParticleMomentum(1,2,0));
 
 	virtual ~p2pPrimaryGeneratorAction();
 
