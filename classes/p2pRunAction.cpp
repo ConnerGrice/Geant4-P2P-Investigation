@@ -11,6 +11,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	manager->OpenFile("data.root");
 
+	//Data for particles entering inner detector
 	manager->CreateNtuple("Inner","Position");
 	manager->CreateNtupleIColumn("Event");
 	manager->CreateNtupleDColumn("X");
@@ -18,6 +19,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 	manager->CreateNtupleDColumn("Z");
 	manager->FinishNtuple(0);
 
+	//Data for particles entering outer detector
 	manager->CreateNtuple("Outer","Position");
 	manager->CreateNtupleIColumn("Event");
 	manager->CreateNtupleDColumn("X");

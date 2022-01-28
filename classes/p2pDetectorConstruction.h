@@ -13,6 +13,8 @@
 #include <G4Tubs.hh>
 #include <G4RotationMatrix.hh>
 
+#include "p2pSensitiveDetector.h"
+
 class p2pDetectorConstruction: public G4VUserDetectorConstruction {
 public:
 	p2pDetectorConstruction();

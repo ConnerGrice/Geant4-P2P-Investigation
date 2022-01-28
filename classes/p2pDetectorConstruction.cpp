@@ -1,5 +1,4 @@
 #include "p2pDetectorConstruction.h"
-#include "p2pSensitiveDetector.h"
 
 p2pDetectorConstruction::p2pDetectorConstruction() : G4VUserDetectorConstruction(),
 logicInn(0),logicOut(0){
@@ -87,9 +86,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 }
 
 void p2pDetectorConstruction::ConstructSDandField(){
-	p2pSensitiveDetector* innDet = new p2pSensitiveDetector("InnerSens");
-	p2pSensitiveDetector* outDet = new p2pSensitiveDetector("OuterSens");
-	logicInn->SetSensitiveDetector(innDet);
-	logicOut->SetSensitiveDetector(outDet);
+	logicInn->SetSensitiveDetector(new p2pSensitiveDetector("InnerSens"));
+	logicOut->SetSensitiveDetector(new p2pSensitiveDetector("OuterSens"));
 }
 

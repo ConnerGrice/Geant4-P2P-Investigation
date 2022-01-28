@@ -9,8 +9,6 @@
 #include <G4SystemOfUnits.hh>
 #include <G4Event.hh>
 #include <G4Proton.hh>
-#include <G4ParticleTable.hh>
-#include <G4ParticleDefinition.hh>
 
 class p2pPrimaryGeneratorAction: public G4VUserPrimaryGeneratorAction {
 public:

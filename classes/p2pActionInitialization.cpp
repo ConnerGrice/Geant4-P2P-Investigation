@@ -3,12 +3,10 @@
 #include "p2pRunAction.h"
 
 p2pActionInitialization::p2pActionInitialization() : G4VUserActionInitialization() {
-	// TODO Auto-generated constructor stub
 
 }
 
 p2pActionInitialization::~p2pActionInitialization() {
-	// TODO Auto-generated destructor stub
 }
 
 void p2pActionInitialization::Build() const{

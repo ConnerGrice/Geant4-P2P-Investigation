@@ -1,23 +1,6 @@
-/*
- * p2pPhysicsList.cpp
- *
- *  Created on: Jan 20, 2022
- *      Author: local1
- */
-
 #include "p2pPhysicsList.h"
 
-#include <G4LeptonConstructor.hh>
-#include <G4MesonConstructor.hh>
-#include <G4BaryonConstructor.hh>
-#include <G4BosonConstructor.hh>
-#include <G4ShortLivedConstructor.hh>
-#include <G4IonConstructor.hh>
-#include <G4VPhysicsConstructor.hh>
-#include <G4EmStandardPhysics.hh>
-
 p2pPhysicsList::p2pPhysicsList() {
-	// TODO Auto-generated constructor stub
 
 }
 
