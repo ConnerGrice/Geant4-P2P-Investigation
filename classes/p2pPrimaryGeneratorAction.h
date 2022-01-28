@@ -8,14 +8,13 @@
 #include <G4ParticleGun.hh>
 #include <G4SystemOfUnits.hh>
 #include <G4Event.hh>
+#include <G4Proton.hh>
+#include <G4ParticleTable.hh>
+#include <G4ParticleDefinition.hh>
 
 class p2pPrimaryGeneratorAction: public G4VUserPrimaryGeneratorAction {
 public:
-	p2pPrimaryGeneratorAction(
-						const G4String& particleName = "alpha",
-						G4double energy = 300*MeV,
-						G4ThreeVector position = G4ThreeVector(0,0,-25*cm),
-						G4ParticleMomentum momentumDir = G4ParticleMomentum(1,2,0));
+	p2pPrimaryGeneratorAction();
 
 	virtual ~p2pPrimaryGeneratorAction();
 

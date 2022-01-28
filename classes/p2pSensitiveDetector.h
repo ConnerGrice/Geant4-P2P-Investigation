@@ -3,6 +3,10 @@
 
 #include <G4VSensitiveDetector.hh>
 
+#include <g4root.hh>
+#include <G4RunManager.hh>
+#include <G4SystemOfUnits.hh>
+
 class p2pSensitiveDetector: public G4VSensitiveDetector {
 public:
 	p2pSensitiveDetector(G4String);

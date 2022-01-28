@@ -1,8 +1,5 @@
 #include "p2pSensitiveDetector.h"
 
-#include <g4root.hh>
-#include <G4RunManager.hh>
-#include <G4SystemOfUnits.hh>
 p2pSensitiveDetector::p2pSensitiveDetector(G4String name) : G4VSensitiveDetector(name) {
 }
 
@@ -16,12 +13,10 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	G4StepPoint* preStepPoint = aStep->GetPreStepPoint();
 	G4ThreeVector prePos = preStepPoint->GetPosition();
 
-	G4StepPoint* postStepPoint = aStep->GetPostStepPoint();
-	G4ThreeVector postPos = postStepPoint->GetPosition();
 
 	const G4VTouchable* touchable = preStepPoint->GetTouchable();
 	G4int copyNo = touchable->GetCopyNumber();
-
+/*
 	G4VPhysicalVolume* physVol = touchable->GetVolume();
 	G4ThreeVector posDetector = physVol->GetTranslation();
 	G4RotationMatrix* rotDetector = physVol->GetRotation();
@@ -29,9 +24,10 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 
 	G4int numSeg = 20;
 	G4double theta;
-	G4double sum;
 
 	theta = thetaX+(M_PI/numSeg);
+
+
 
 	//positions in mm
 	G4cout<<"Index: "<<copyNo<<G4endl;
@@ -39,7 +35,31 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	G4cout<<"delta: "<<thetaX<<G4endl;
 
 	G4cout<<"theta:  "<<theta<<G4endl;
-	G4cout<<"Particle Position: "<<prePos<<G4endl;
+
+*/
+	//G4cout<<"Particle Position: "<<prePos<<G4endl;
+
+	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+	G4AnalysisManager* manager = G4AnalysisManager::Instance();
+	manager->FillNtupleIColumn(0,event);
+	manager->FillNtupleDColumn(1,prePos[0]);
+	manager->FillNtupleDColumn(2,prePos[1]);
+	manager->FillNtupleDColumn(3,prePos[2]);
+
+	switch (copyNo){
+	case 1:
+		manager->AddNtupleRow(0);
+		G4cout<<"Inner: "<<prePos<<G4endl;
+		break;
+	case 2:
+		manager->AddNtupleRow(1);
+		G4cout<<"Outer: "<<prePos<<G4endl;
+		break;
+	default:
+		break;
+	}
+
 
 	return true;
 }
