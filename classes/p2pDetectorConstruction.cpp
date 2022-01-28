@@ -1,16 +1,6 @@
 #include "p2pDetectorConstruction.h"
 #include "p2pSensitiveDetector.h"
 
-#include <G4NistManager.hh>
-#include <G4SystemOfUnits.hh>
-#include <G4Box.hh>
-#include <G4LogicalVolume.hh>
-#include <G4VPhysicalVolume.hh>
-#include <G4PVPlacement.hh>
-#include <G4ThreeVector.hh>
-#include <G4Tubs.hh>
-#include <G4RotationMatrix.hh>
-
 p2pDetectorConstruction::p2pDetectorConstruction() : G4VUserDetectorConstruction(),
 logicInn(0),logicOut(0){
 
@@ -88,8 +78,8 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 			rot->rotateZ(i*innEnd);
 			trans = G4ThreeVector(0,0,segLen*(1-numRow)/2+2*j*innHHight);
 
-			new G4PVPlacement(rot,trans,logicInn,"Inner",logicWorld,false,1,checkOverlaps);
-			new G4PVPlacement(rot,trans,logicOut,"Outer",logicWorld,false,2,checkOverlaps);
+			new G4PVPlacement(rot,trans,logicInn,"Inner",logicWorld,false,0,checkOverlaps);
+			new G4PVPlacement(rot,trans,logicOut,"Outer",logicWorld,false,1,checkOverlaps);
 		}
 	}
 

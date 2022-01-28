@@ -37,28 +37,18 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	G4cout<<"theta:  "<<theta<<G4endl;
 
 */
-	//G4cout<<"Particle Position: "<<prePos<<G4endl;
+	G4cout<<"Particle Position: "<<prePos<<" "<<copyNo<<G4endl;
 
 	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
-	manager->FillNtupleIColumn(0,event);
-	manager->FillNtupleDColumn(1,prePos[0]);
-	manager->FillNtupleDColumn(2,prePos[1]);
-	manager->FillNtupleDColumn(3,prePos[2]);
 
-	switch (copyNo){
-	case 1:
-		manager->AddNtupleRow(0);
-		G4cout<<"Inner: "<<prePos<<G4endl;
-		break;
-	case 2:
-		manager->AddNtupleRow(1);
-		G4cout<<"Outer: "<<prePos<<G4endl;
-		break;
-	default:
-		break;
-	}
+	manager->FillNtupleIColumn(copyNo,0,event);
+	manager->FillNtupleDColumn(copyNo,1,prePos[0]);
+	manager->FillNtupleDColumn(copyNo,2,prePos[1]);
+	manager->FillNtupleDColumn(copyNo,3,prePos[2]);
+
+	manager->AddNtupleRow(copyNo);
 
 
 	return true;
