@@ -250,6 +250,33 @@ classes/p2pPrimaryGeneratorAction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.s
 .PHONY : classes/p2pPrimaryGeneratorAction.cpp.s
 
+classes/p2pRunAction.o: classes/p2pRunAction.cpp.o
+
+.PHONY : classes/p2pRunAction.o
+
+# target to build an object file
+classes/p2pRunAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o
+.PHONY : classes/p2pRunAction.cpp.o
+
+classes/p2pRunAction.i: classes/p2pRunAction.cpp.i
+
+.PHONY : classes/p2pRunAction.i
+
+# target to preprocess a source file
+classes/p2pRunAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.i
+.PHONY : classes/p2pRunAction.cpp.i
+
+classes/p2pRunAction.s: classes/p2pRunAction.cpp.s
+
+.PHONY : classes/p2pRunAction.s
+
+# target to generate assembly for a file
+classes/p2pRunAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.s
+.PHONY : classes/p2pRunAction.cpp.s
+
 classes/p2pSensitiveDetector.o: classes/p2pSensitiveDetector.cpp.o
 
 .PHONY : classes/p2pSensitiveDetector.o
@@ -325,6 +352,9 @@ help:
 	@echo "... classes/p2pPrimaryGeneratorAction.o"
 	@echo "... classes/p2pPrimaryGeneratorAction.i"
 	@echo "... classes/p2pPrimaryGeneratorAction.s"
+	@echo "... classes/p2pRunAction.o"
+	@echo "... classes/p2pRunAction.i"
+	@echo "... classes/p2pRunAction.s"
 	@echo "... classes/p2pSensitiveDetector.o"
 	@echo "... classes/p2pSensitiveDetector.i"
 	@echo "... classes/p2pSensitiveDetector.s"
