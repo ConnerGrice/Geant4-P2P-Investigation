@@ -12,6 +12,7 @@
 #include <G4ThreeVector.hh>
 #include <G4Tubs.hh>
 #include <G4RotationMatrix.hh>
+#include <G4PVReplica.hh>
 
 #include "p2pSensitiveDetector.h"
 

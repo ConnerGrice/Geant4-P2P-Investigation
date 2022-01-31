@@ -6,11 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/home/local1/eclipse-workspace/p2p/classes/p2pActionInitialization.cpp
+p2pActionInitialization.h
+/home/local1/eclipse-workspace/p2p/classes/p2pActionInitialization.h
+p2pPrimaryGeneratorAction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+p2pRunAction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
+
+/home/local1/eclipse-workspace/p2p/classes/p2pActionInitialization.h
+G4VUserActionInitialization.hh
+-
+p2pPrimaryGeneratorAction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+p2pRunAction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
+
 /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.cpp
 p2pDetectorConstruction.h
 /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
-p2pSensitiveDetector.h
-/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
 /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
 G4VUserDetectorConstruction.hh
@@ -35,10 +49,26 @@ G4Tubs.hh
 -
 G4RotationMatrix.hh
 -
+G4PVReplica.hh
+-
+p2pSensitiveDetector.h
+/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
-/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.cpp
-p2pRunAction.h
-/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+G4VUserPrimaryGeneratorAction.hh
+-
+G4ThreeVector.hh
+-
+G4ParticleMomentum.hh
+-
+G4ParticleGun.hh
+-
+G4SystemOfUnits.hh
+-
+G4Event.hh
+-
+G4Proton.hh
+-
 
 /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
 G4UserRunAction.hh
@@ -1204,6 +1234,14 @@ G4Exp.hh
 G4Threading.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4Ions.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+G4ios.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ios.hh
+G4ParticleDefinition.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.hh
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4Isotope.hh
 globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
@@ -1574,6 +1612,12 @@ G4VPhysicalVolume.hh
 G4Transform3D.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4Transform3D.hh
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4PVReplica.hh
+G4VPhysicalVolume.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4VPhysicalVolume.hh
+G4GeomSplitter.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4GeomSplitter.hh
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4ParameterisedNavigation.hh
 G4Types.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
@@ -1633,6 +1677,20 @@ G4ParticleDefinition.icc
 /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.icc
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.icc
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleGun.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+G4VPrimaryGenerator.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh
+G4ThreeVector.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
+G4ParticleDefinition.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.hh
+G4PrimaryVertex.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryVertex.hh
+G4ParticleMomentum.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleMomentum.hh
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleMomentum.hh
 G4ThreeVector.hh
@@ -1865,6 +1923,16 @@ PTL/Globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/PTL/Globals.hh
 timemory/utility/utility.hpp
 -
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Proton.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+G4ios.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ios.hh
+G4ParticleDefinition.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.hh
+G4Ions.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4Ions.hh
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4ReferenceCountedHandle.hh
 G4Allocator.hh
@@ -2902,6 +2970,10 @@ G4VPhysicalVolume.icc
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4VPhysicalVolume.icc
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh
+G4ThreeVector.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4VProcess.hh
 cmath
 -
@@ -3034,6 +3106,8 @@ globals.hh
 G4ThreeVector.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4VUserActionInitialization.hh
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4VUserDetectorConstruction.hh
 globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
@@ -3041,6 +3115,8 @@ vector
 -
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4VUserEventInformation.hh
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VUserPrimaryGeneratorAction.hh
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4VUserTrackInformation.hh
 globals.hh

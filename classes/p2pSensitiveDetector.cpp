@@ -7,7 +7,7 @@ p2pSensitiveDetector::~p2pSensitiveDetector() {
 }
 
 G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
-	G4Track* track = aStep->GetTrack();
+	//G4Track* track = aStep->GetTrack();
 	//track->SetTrackStatus(fStopAndKill);
 
 	//Gets position of particles hitting detector
@@ -21,40 +21,52 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	//Gets event number
 	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
-	//WIP: Getting positional data directly from detector, not using preStepPoints
-/*
+	//Gets translation and rotation of detector segment that was hit
 	G4VPhysicalVolume* physVol = touchable->GetVolume();
 	G4ThreeVector posDetector = physVol->GetTranslation();
 	G4RotationMatrix* rotDetector = physVol->GetRotation();
-	G4double thetaX = rotDetector->getDelta();	//180 clockwise and 180 anticlockwise
 
-	G4int numSeg = 20;
-	G4double theta;
+	G4double theta = (rotDetector->getPsi())*2;
 
-	theta = thetaX+(M_PI/numSeg);
+	G4int numSeg = 30;				//Number of segments
+	G4double thick = 0.5*mm;		//Thickness of tubes (0.5mm)
+	G4double innMin = 5*cm;			//Inner inner radius
+	G4double gap = 3*cm;			//Gap between detectors
 
+	G4double outMin = innMin + gap;		//Outer inner radius
+	G4double innRad = innMin+(thick/2);	//Inner central radius
+	G4double outRad = outMin+(thick/2);	//Outer central radius
 
+	G4ThreeVector detPos;	//Calculated detector position
+
+	G4double delta = theta + (M_PI/(numSeg));	//Angle about z axis
+
+	//Decides which radius to use when calculating coordinates
+	switch(copyNo) {
+	case 0:
+		detPos = G4ThreeVector(innRad*std::cos(delta),innRad*std::sin(delta),posDetector.getZ());
+		break;
+	case 1:
+		detPos = G4ThreeVector(outRad*std::cos(delta),outRad*std::sin(delta),posDetector.getZ());
+		break;
+	default:
+		break;
+	}
 
 	//positions in mm
-	G4cout<<"Index: "<<copyNo<<G4endl;
-	G4cout<<"Detector Position: "<<posDetector<<G4endl;
-	G4cout<<"delta: "<<thetaX<<G4endl;
-
-	G4cout<<"theta:  "<<theta<<G4endl;
-
-*/
-
-	G4cout<<"Particle Position: "<<prePos<<" "<<copyNo<<G4endl;
+	//G4cout<<"Hit: 		"<<copyNo<<G4endl;
+	//G4cout<<"Psi: 		"<<delta<<G4endl;
+	G4cout<<"Exact: 	"<<prePos<<G4endl;
+	G4cout<<"Calculated:"<<detPos<<G4endl;
 
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 
 	//copyNo = 0 (Inner), copyNo = 1 (Outer)
 	manager->FillNtupleIColumn(copyNo,0,event);
-	manager->FillNtupleDColumn(copyNo,1,prePos[0]);
-	manager->FillNtupleDColumn(copyNo,2,prePos[1]);
-	manager->FillNtupleDColumn(copyNo,3,prePos[2]);
+	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
+	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
+	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
 	manager->AddNtupleRow(copyNo);
-
 	return true;
 }
 

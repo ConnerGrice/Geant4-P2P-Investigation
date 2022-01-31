@@ -27,24 +27,17 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	G4Box* solidWorld = new G4Box("World",worldx,worldy,worldz);
 	G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld,worldMat,"World");
-	G4VPhysicalVolume* physicalWorld = new G4PVPlacement(0,
-														G4ThreeVector(0,0,0),
-														logicWorld,
-														"World",
-														0,
-														false,
-														0,
-														checkOverlaps);
+	G4VPhysicalVolume* physicalWorld = new G4PVPlacement(0,G4ThreeVector(0,0,0),logicWorld,"World",0,false,0,checkOverlaps);
 
-	//Detector surfaces
-	G4int numSeg = 25;				//Number of segments
-	G4int numRow = 15;				//Number of rows
-	G4double len = 30*cm;			//Total length of tubes
+	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)
+	G4int numSeg = 30;				//Number of segments
+	G4int numRow = 30;				//Number of rows
+	G4double len = 30*cm;			//Total length of tubes (30cm)
 	G4double segLen = len/numRow;	//Length of each segment
-	G4double gap = 3*cm;			//Space between tubes
-	G4double thick = 0.5*mm;		//Thickness of tubes
+	G4double gap = 3*cm;			//Space between tubes (3cm)
+	G4double thick = 0.5*mm;		//Thickness of tubes (0.5mm)
 
-	G4double innMin = 5*cm;				//Inner radius of segment
+	G4double innMin = 5*cm;				//Inner radius of segment (5cm)
 	G4double innMax = innMin + thick;	//Outer radius of segment
 	G4double innHHight = segLen/2;		//half the length of cylinder segment
 	G4double innStart = 0;				//segment starting angle
@@ -61,7 +54,6 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	//Outer cylinder
 	G4Tubs* solidOut = new G4Tubs("Outer",outMin,outMax,innHHight,innStart,innEnd);
 	logicOut = new G4LogicalVolume(solidOut,detectorMat,"Outer");
-
 
 	G4ThreeVector trans;	//Segment translation
 	G4RotationMatrix* rot;	//Segment rotation
@@ -81,7 +73,6 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 			new G4PVPlacement(rot,trans,logicOut,"Outer",logicWorld,false,1,checkOverlaps);
 		}
 	}
-
 	return physicalWorld;
 }
 
