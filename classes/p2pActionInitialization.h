@@ -5,6 +5,9 @@
 
 #include "p2pPrimaryGeneratorAction.h"
 #include "p2pRunAction.h"
+#include "p2pEventAction.h"
+#include "p2pSteppingAction.h"
+
 
 class p2pActionInitialization: public G4VUserActionInitialization {
 public:

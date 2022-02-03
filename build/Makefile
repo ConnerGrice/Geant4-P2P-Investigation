@@ -196,6 +196,33 @@ classes/p2pDetectorConstruction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.s
 .PHONY : classes/p2pDetectorConstruction.cpp.s
 
+classes/p2pEventAction.o: classes/p2pEventAction.cpp.o
+
+.PHONY : classes/p2pEventAction.o
+
+# target to build an object file
+classes/p2pEventAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
+.PHONY : classes/p2pEventAction.cpp.o
+
+classes/p2pEventAction.i: classes/p2pEventAction.cpp.i
+
+.PHONY : classes/p2pEventAction.i
+
+# target to preprocess a source file
+classes/p2pEventAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.i
+.PHONY : classes/p2pEventAction.cpp.i
+
+classes/p2pEventAction.s: classes/p2pEventAction.cpp.s
+
+.PHONY : classes/p2pEventAction.s
+
+# target to generate assembly for a file
+classes/p2pEventAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.s
+.PHONY : classes/p2pEventAction.cpp.s
+
 classes/p2pPhysicsList.o: classes/p2pPhysicsList.cpp.o
 
 .PHONY : classes/p2pPhysicsList.o
@@ -304,6 +331,33 @@ classes/p2pSensitiveDetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.s
 .PHONY : classes/p2pSensitiveDetector.cpp.s
 
+classes/p2pSteppingAction.o: classes/p2pSteppingAction.cpp.o
+
+.PHONY : classes/p2pSteppingAction.o
+
+# target to build an object file
+classes/p2pSteppingAction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
+.PHONY : classes/p2pSteppingAction.cpp.o
+
+classes/p2pSteppingAction.i: classes/p2pSteppingAction.cpp.i
+
+.PHONY : classes/p2pSteppingAction.i
+
+# target to preprocess a source file
+classes/p2pSteppingAction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.i
+.PHONY : classes/p2pSteppingAction.cpp.i
+
+classes/p2pSteppingAction.s: classes/p2pSteppingAction.cpp.s
+
+.PHONY : classes/p2pSteppingAction.s
+
+# target to generate assembly for a file
+classes/p2pSteppingAction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.s
+.PHONY : classes/p2pSteppingAction.cpp.s
+
 p2p.o: p2p.cpp.o
 
 .PHONY : p2p.o
@@ -346,6 +400,9 @@ help:
 	@echo "... classes/p2pDetectorConstruction.o"
 	@echo "... classes/p2pDetectorConstruction.i"
 	@echo "... classes/p2pDetectorConstruction.s"
+	@echo "... classes/p2pEventAction.o"
+	@echo "... classes/p2pEventAction.i"
+	@echo "... classes/p2pEventAction.s"
 	@echo "... classes/p2pPhysicsList.o"
 	@echo "... classes/p2pPhysicsList.i"
 	@echo "... classes/p2pPhysicsList.s"
@@ -358,6 +415,9 @@ help:
 	@echo "... classes/p2pSensitiveDetector.o"
 	@echo "... classes/p2pSensitiveDetector.i"
 	@echo "... classes/p2pSensitiveDetector.s"
+	@echo "... classes/p2pSteppingAction.o"
+	@echo "... classes/p2pSteppingAction.i"
+	@echo "... classes/p2pSteppingAction.s"
 	@echo "... p2p.o"
 	@echo "... p2p.i"
 	@echo "... p2p.s"

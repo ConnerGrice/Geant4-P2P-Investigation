@@ -115,9 +115,22 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.cpp -o CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.s
 
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: CMakeFiles/p2p.dir/flags.make
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: ../classes/p2pEventAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.cpp
+
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.cpp > CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.i
+
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.cpp -o CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.s
+
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o: CMakeFiles/p2p.dir/flags.make
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o: ../classes/p2pPhysicsList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pPhysicsList.cpp
 
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.i: cmake_force
@@ -130,7 +143,7 @@ CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.s: cmake_force
 
 CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o: CMakeFiles/p2p.dir/flags.make
 CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o: ../classes/p2pPrimaryGeneratorAction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.cpp
 
 CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.s: cmake_force
 
 CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o: CMakeFiles/p2p.dir/flags.make
 CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o: ../classes/p2pRunAction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.cpp
 
 CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.s: cmake_force
 
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: CMakeFiles/p2p.dir/flags.make
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: ../classes/p2pSensitiveDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.cpp
 
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.i: cmake_force
@@ -167,15 +180,30 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.cpp -o CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.s
 
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: CMakeFiles/p2p.dir/flags.make
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pSteppingAction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o -c /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.cpp
+
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.cpp > CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.i
+
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.cpp -o CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.s
+
 # Object files for target p2p
 p2p_OBJECTS = \
 "CMakeFiles/p2p.dir/p2p.cpp.o" \
 "CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o" \
 "CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o" \
+"CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o" \
 "CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o" \
 "CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o" \
 "CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o" \
-"CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o"
+"CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o" \
+"CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o"
 
 # External object files for target p2p
 p2p_EXTERNAL_OBJECTS =
@@ -183,10 +211,12 @@ p2p_EXTERNAL_OBJECTS =
 p2p: CMakeFiles/p2p.dir/p2p.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
+p2p: CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o
 p2p: CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
+p2p: CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
 p2p: CMakeFiles/p2p.dir/build.make
 p2p: /usr/local/geant4.10.07.p02/lib64/libG4Tree.so
 p2p: /usr/local/geant4.10.07.p02/lib64/libG4FR.so
@@ -237,7 +267,7 @@ p2p: /usr/local/geant4.10.07.p02/lib64/libG4global.so
 p2p: /usr/local/geant4.10.07.p02/lib64/libG4ptl.so.0.0.2
 p2p: /usr/local/clhep/2.4.4.0/lib/libCLHEP-2.4.4.0.so
 p2p: CMakeFiles/p2p.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable p2p"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/local1/eclipse-workspace/p2p/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable p2p"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/p2p.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

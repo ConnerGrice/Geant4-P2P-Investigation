@@ -29,6 +29,16 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld,worldMat,"World");
 	G4VPhysicalVolume* physicalWorld = new G4PVPlacement(0,G4ThreeVector(0,0,0),logicWorld,"World",0,false,0,checkOverlaps);
 
+	//Spherical calorimeter
+	G4double calMin = 20*cm;
+	G4double calThick = 30*cm;
+	G4double calMax = calMin+calThick;
+
+	G4Sphere* solidCal= new G4Sphere("Calorimeter",calMin,calMax,0,2*M_PI,0,M_PI);
+	G4LogicalVolume* logicCal = new G4LogicalVolume(solidCal,detectorMat,"Colorimeter");
+	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicCal,"Colorimeter",logicWorld,false,3,checkOverlaps);
+
+
 	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)
 	G4int numSeg = 30;				//Number of segments
 	G4int numRow = 30;				//Number of rows

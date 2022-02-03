@@ -13,7 +13,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 
 	//Data for particles entering inner detector
 	manager->CreateNtuple("Inner","Position");
-	manager->CreateNtupleIColumn("Event");
+	manager->CreateNtupleIColumn("ID");
 	manager->CreateNtupleDColumn("X");
 	manager->CreateNtupleDColumn("Y");
 	manager->CreateNtupleDColumn("Z");
@@ -21,7 +21,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 
 	//Data for particles entering outer detector
 	manager->CreateNtuple("Outer","Position");
-	manager->CreateNtupleIColumn("Event");
+	manager->CreateNtupleIColumn("ID");
 	manager->CreateNtupleDColumn("X");
 	manager->CreateNtupleDColumn("Y");
 	manager->CreateNtupleDColumn("Z");

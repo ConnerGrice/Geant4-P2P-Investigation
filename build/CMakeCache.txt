@@ -239,8 +239,8 @@ Fontconfig_LIBRARY:FILEPATH=/usr/lib64/libfontconfig.so
 //No help, variable specified on the command line.
 Geant4-DIR:UNINITIALIZED=/usr/local/geant4.10.07.p02/lib64/Geant4-10.7.2
 
-//No help, variable specified on the command line.
-Geant4_DIR:UNINITIALIZED=/usr/local/geant4.10.07.p02/lib64/Geant4-10.7.2
+//The directory containing a CMake configuration file for Geant4.
+Geant4_DIR:PATH=/usr/local/geant4.10.07.p02/lib64/Geant4-10.7.2
 
 //Path to a file.
 MOTIF_INCLUDE_DIR:PATH=/usr/include

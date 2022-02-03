@@ -7,12 +7,16 @@ p2pSensitiveDetector::~p2pSensitiveDetector() {
 }
 
 G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
-	//G4Track* track = aStep->GetTrack();
+	G4Track* track = aStep->GetTrack();
 	//track->SetTrackStatus(fStopAndKill);
+	G4int trackID = track->GetTrackID();
 
 	//Gets position of particles hitting detector
 	G4StepPoint* preStepPoint = aStep->GetPreStepPoint();
 	G4ThreeVector prePos = preStepPoint->GetPosition();
+
+	G4ThreeVector mom = preStepPoint->GetMomentum();
+	G4double momMag = mom.mag();
 
 	//Gets the copy number of hit detector
 	const G4VTouchable* touchable = preStepPoint->GetTouchable();
@@ -53,16 +57,27 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		break;
 	}
 
+	G4ThreeVector detDir = detPos.unit();
+	G4ThreeVector momCal = momMag*detDir;
+
+
 	//positions in mm
 	//G4cout<<"Hit: 		"<<copyNo<<G4endl;
 	//G4cout<<"Psi: 		"<<delta<<G4endl;
-	G4cout<<"Exact: 	"<<prePos<<G4endl;
-	G4cout<<"Calculated:"<<detPos<<G4endl;
+	//G4cout<<"Exact: 	"<<prePos<<G4endl;
+	//G4cout<<"Calculated:"<<detPos<<G4endl;
+
+	G4cout<<"Track: "<<trackID <<G4endl;
+	G4cout<<"Momentum: "<<momMag<<G4endl;
+	G4cout<<"Direction: "<<detDir<<G4endl;
+	G4cout<<"Mom Dir: "<<momCal<<G4endl;
+	G4cout<<"Mom Exa: "<<mom<<G4endl;
+
 
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 
 	//copyNo = 0 (Inner), copyNo = 1 (Outer)
-	manager->FillNtupleIColumn(copyNo,0,event);
+	manager->FillNtupleIColumn(copyNo,0,trackID);
 	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
 	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
 	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
