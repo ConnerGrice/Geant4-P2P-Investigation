@@ -17,6 +17,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 	manager->CreateNtupleDColumn("X");
 	manager->CreateNtupleDColumn("Y");
 	manager->CreateNtupleDColumn("Z");
+	manager->CreateNtupleDColumn("P");
 	manager->FinishNtuple(0);
 
 	//Data for particles entering outer detector

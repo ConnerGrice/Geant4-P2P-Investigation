@@ -23,7 +23,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	G4int copyNo = touchable->GetCopyNumber();
 
 	//Gets event number
-	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+	//G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
 	//Gets translation and rotation of detector segment that was hit
 	G4VPhysicalVolume* physVol = touchable->GetVolume();
@@ -32,7 +32,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 
 	G4double theta = (rotDetector->getPsi())*2;
 
-	G4int numSeg = 30;				//Number of segments
+	G4int numSeg = 31;				//Number of segments
 	G4double thick = 0.5*mm;		//Thickness of tubes (0.5mm)
 	G4double innMin = 5*cm;			//Inner inner radius
 	G4double gap = 3*cm;			//Gap between detectors
@@ -81,6 +81,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
 	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
 	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
+	if (copyNo == 0){manager->FillNtupleDColumn(copyNo,4,momMag);}
 	manager->AddNtupleRow(copyNo);
 	return true;
 }

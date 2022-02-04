@@ -20,9 +20,9 @@ void p2pPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	fParticleGun->SetParticleEnergy(energy);
 	fParticleGun->SetParticlePosition(position);
 
-	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1,1,1));
+	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1,1,0));
 	fParticleGun->GeneratePrimaryVertex(anEvent);
-	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(-1,-2,-3));
+	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(-1,1,0));
 	fParticleGun->GeneratePrimaryVertex(anEvent);
 
 }

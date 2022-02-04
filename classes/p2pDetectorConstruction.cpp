@@ -40,8 +40,8 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 
 	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)
-	G4int numSeg = 30;				//Number of segments
-	G4int numRow = 30;				//Number of rows
+	G4int numSeg = 31;				//Number of segments
+	G4int numRow = 31;				//Number of rows
 	G4double len = 30*cm;			//Total length of tubes (30cm)
 	G4double segLen = len/numRow;	//Length of each segment
 	G4double gap = 3*cm;			//Space between tubes (3cm)
