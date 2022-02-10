@@ -1,7 +1,7 @@
 #include "p2pDetectorConstruction.h"
 
 p2pDetectorConstruction::p2pDetectorConstruction() : G4VUserDetectorConstruction(),
-logicInn(0),logicOut(0){
+logicInn(0),logicOut(0),fScoringVolume(0){
 
 }
 
@@ -37,6 +37,8 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	G4Sphere* solidCal= new G4Sphere("Calorimeter",calMin,calMax,0,2*M_PI,0,M_PI);
 	G4LogicalVolume* logicCal = new G4LogicalVolume(solidCal,detectorMat,"Colorimeter");
 	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicCal,"Colorimeter",logicWorld,false,3,checkOverlaps);
+
+	fScoringVolume = logicCal;
 
 
 	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)

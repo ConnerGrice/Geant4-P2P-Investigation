@@ -22,9 +22,11 @@ public:
 	p2pDetectorConstruction();
 	virtual ~p2pDetectorConstruction();
 	virtual G4VPhysicalVolume* Construct();
+	G4LogicalVolume* GetScoringVolume() const {return fScoringVolume;};
 private:
 	G4LogicalVolume* logicInn;
 	G4LogicalVolume* logicOut;
+	G4LogicalVolume* fScoringVolume;
 	virtual void ConstructSDandField();
 };
 

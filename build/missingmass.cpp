@@ -7,6 +7,10 @@
 #include <TLorentzVector.h>
 #include <TSystem.h>
 
+double momentum(double energy, const double mass){
+	return sqrt((energy*energy)+(2*energy*mass));
+}
+
 void missingmass(){
 	//Gets data file
 	TFile input("data.root");
@@ -16,24 +20,29 @@ void missingmass(){
 	input.GetObject("Inner",inner);
 	TTree* outer=nullptr;
 	input.GetObject("Outer",outer);
+	TTree* particles=nullptr;
+	input.GetObject("Particles", particles);
 
 	//Combines inner and outer trees
 	inner->AddFriend(outer);
+	inner->AddFriend(particles);
 
 	//Reader for combined tree
 	TTreeReader reader(inner);
 
-	TTreeReaderValue<int> innID = {reader,"ID"};
-	TTreeReaderValue<double> innX = {reader,"X"};
-	TTreeReaderValue<double> innY = {reader,"Y"};
-	TTreeReaderValue<double> innZ = {reader,"Z"};
-	TTreeReaderValue<double> pMag = {reader,"P"};
+	TTreeReaderValue<int> innID = {reader,"ID"};	//Track ID
+	TTreeReaderValue<double> innX = {reader,"X"};	//Inner detector X coord
+	TTreeReaderValue<double> innY = {reader,"Y"};	//Inner detector Y coord
+	TTreeReaderValue<double> innZ = {reader,"Z"};	//Inner detector Z coord
+	//TTreeReaderValue<double> pMag = {reader,"P"};
 
-	TTreeReaderValue<int> outID = {reader,"Outer.ID"};
-	TTreeReaderValue<double> outX = {reader, "Outer.X"};
-	TTreeReaderValue<double> outY = {reader, "Outer.Y"};
-	TTreeReaderValue<double> outZ = {reader, "Outer.Z"};
+	TTreeReaderValue<int> outID = {reader,"Outer.ID"};	//Track ID
+	TTreeReaderValue<double> outX = {reader,"Outer.X"};//Outer detector X coord
+	TTreeReaderValue<double> outY = {reader,"Outer.Y"};//Outer detector Y coord
+	TTreeReaderValue<double> outZ = {reader,"Outer.Z"};//Outer detector Z coord
 
+	TTreeReaderValue<double> E1 = {reader,"Particles.E1"};//Particle 1 energy
+	TTreeReaderValue<double> E2 = {reader,"Particles.E2"};//Particle 2 energy
 
 	const double proM=938.272;	//Mass of a proton
 
@@ -41,26 +50,35 @@ void missingmass(){
 	TVector3 mom1,mom2;	//Momentum 3-vectors
 	TLorentzVector lmom1,lmom2;	//Momentum 4-vectors
 
+	double P1,P2;	//Particle momentum
 
 	//Loops through inner tree
 	while (reader.Next()){
+
+		//Calculates momentum for each particle
+		P1 = momentum(*E1,proM);
+		P2 = momentum(*E2,proM);
 
 		//Only uses data from the same particle track
 		if(*innID == 1){
 			//Gets displacement t 3-vector
 			disp1.SetXYZ(*outX-*innX,*outY-*innY,*outZ-*innZ);
+
 			//Gets momentum 3-vector
-			mom1 = *pMag*(disp1.Unit());
+			mom1 = P1*(disp1.Unit());
+
 			//Gets momentum 4-vector
-			lmom1.SetPxPyPzE(mom1.X(),mom1.Y(),mom1.Z(),sqrt(proM*proM+mom1.Mag2()));
+			lmom1.SetPxPyPzE(mom1.X(),mom1.Y(),mom1.Z(),*E1);
 		}
 		if(*innID == 2){
 			//Gets displacement 3-vector
 			disp2.SetXYZ(*outX-*innX,*outY-*innY,*outZ-*innZ);
+
 			//Gets momentum 3-vector
-			mom2 = *pMag*(disp2.Unit());
+			mom2 = P2*(disp2.Unit());
+
 			//Gets momentum 4-vector
-			lmom2.SetPxPyPzE(mom2.X(),mom2.Y(),mom2.Z(),sqrt(proM*proM+mom1.Mag2()));
+			lmom2.SetPxPyPzE(mom2.X(),mom2.Y(),mom2.Z(),*E2);
 		}
 
 	}

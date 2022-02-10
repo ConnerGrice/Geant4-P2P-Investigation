@@ -81,7 +81,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
 	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
 	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
-	if (copyNo == 0){manager->FillNtupleDColumn(copyNo,4,momMag);}
+	//if (copyNo == 0){manager->FillNtupleDColumn(copyNo,4,momMag);}
 	manager->AddNtupleRow(copyNo);
 	return true;
 }
