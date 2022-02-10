@@ -4,6 +4,8 @@ p2pPrimaryGeneratorAction::p2pPrimaryGeneratorAction(): G4VUserPrimaryGeneratorA
 
 	G4int nofParticles = 1; //Number of particles
 	fParticleGun = new G4ParticleGun(nofParticles);
+	gunMessenger = new p2pPrimaryGeneratorMessenger(this);
+
 
 }
 
@@ -19,11 +21,12 @@ void p2pPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	fParticleGun->SetParticleDefinition(G4Proton::Definition());
 	fParticleGun->SetParticleEnergy(energy);
 	fParticleGun->SetParticlePosition(position);
-
 	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(1,1,0));
 	fParticleGun->GeneratePrimaryVertex(anEvent);
 	fParticleGun->SetParticleMomentumDirection(G4ThreeVector(-1,1,0));
 	fParticleGun->GeneratePrimaryVertex(anEvent);
-
 }
 
+void p2pPrimaryGeneratorAction::SetGun(G4String file){
+	G4cout<<file<<G4endl;
+}

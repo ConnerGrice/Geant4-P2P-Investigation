@@ -7,6 +7,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorMessenger.h
  /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.h
@@ -309,6 +310,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UAdapter.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UBox.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh
@@ -1442,6 +1444,7 @@ CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o
 CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.cpp
  /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorMessenger.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Units/PhysicalConstants.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Units/SystemOfUnits.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Units/defs.h
@@ -1450,6 +1453,7 @@ CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o
  /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/defs.h
  /usr/local/geant4.10.07.p02/include/Geant4/G4Allocator.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4AllocatorPool.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4AutoLock.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4EnvironmentUtils.hh
@@ -1476,6 +1480,73 @@ CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TrajectoryContainer.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VDigiCollection.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VTrajectory.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VUserEventInformation.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VUserPrimaryGeneratorAction.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ios.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/PTL/Globals.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/PTL/Types.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/PTL/Utility.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/evtdefs.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/pwdefs.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/templates.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/tls.hh
+CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorMessenger.cpp.o
+ /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorMessenger.cpp
+ /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorMessenger.h
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Units/PhysicalConstants.h
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Units/SystemOfUnits.h
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Units/defs.h
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/ThreeVector.h
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/ThreeVector.icc
+ /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/defs.h
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Allocator.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4AllocatorPool.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4AutoLock.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4EnvironmentUtils.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Exception.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ExceptionSeverity.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4GlobalConfig.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Ions.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4PDefManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleDefinition.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleGun.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleMomentum.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryParticle.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryVertex.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Profiler.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Profiler.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Proton.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4String.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4String.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SystemOfUnits.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4TrajectoryContainer.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VDigiCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
@@ -2595,6 +2666,7 @@ CMakeFiles/p2p.dir/p2p.cpp.o
  ../classes/p2pEventAction.h
  ../classes/p2pPhysicsList.h
  ../classes/p2pPrimaryGeneratorAction.h
+ ../classes/p2pPrimaryGeneratorMessenger.h
  ../classes/p2pRunAction.h
  ../classes/p2pSensitiveDetector.h
  ../classes/p2pSteppingAction.h
@@ -2957,6 +3029,7 @@ CMakeFiles/p2p.dir/p2p.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4UAdapter.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UBox.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIExecutive.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommandStatus.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh

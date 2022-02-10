@@ -10,6 +10,7 @@
 #include <G4Event.hh>
 #include <G4Proton.hh>
 
+#include "p2pPrimaryGeneratorMessenger.h"
 class p2pPrimaryGeneratorAction: public G4VUserPrimaryGeneratorAction {
 public:
 	p2pPrimaryGeneratorAction();
@@ -18,8 +19,10 @@ public:
 
 	virtual void GeneratePrimaries(G4Event*);
 
+	void SetGun(G4String file);
 private:
 	G4ParticleGun* fParticleGun;
+	p2pPrimaryGeneratorMessenger* gunMessenger;
 };
 
 #endif /* CLASSES_P2PPRIMARYGENERATORACTION_H_ */
