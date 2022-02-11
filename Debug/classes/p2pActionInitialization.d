@@ -54,8 +54,6 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/PTL/Utility.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4Proton.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4Ions.hh \
- ../classes/p2pRunAction.h \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/g4root.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/g4root_defs.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/ntuple \
@@ -288,6 +286,18 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/tools/ntuple_binding \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TRNtupleManager.icc \
  /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh \
+ ../classes/p2pPrimaryGeneratorMessenger.h \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/globals.hh \
+ ../classes/p2pRunAction.h \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh \
  ../classes/p2pEventAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4StackManager.hh \
@@ -503,11 +513,6 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VSteppingVerbose.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TrackingMessenger.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserTrackingAction.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserEventAction.hh \
  ../classes/p2pSteppingAction.h \
@@ -663,10 +668,6 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4Proton.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4Ions.hh:
-
-../classes/p2pRunAction.h:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/g4root.hh:
 
@@ -1132,6 +1133,30 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 
 /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh:
 
+../classes/p2pPrimaryGeneratorMessenger.h:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh:
+
+../classes/p2pRunAction.h:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh:
+
 ../classes/p2pEventAction.h:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
@@ -1561,16 +1586,6 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4TrackingMessenger.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserTrackingAction.hh:
 

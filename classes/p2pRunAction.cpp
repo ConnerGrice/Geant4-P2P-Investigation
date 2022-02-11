@@ -1,6 +1,7 @@
 #include "p2pRunAction.h"
 
 p2pRunAction::p2pRunAction() : G4UserRunAction() {
+	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 }
 
 p2pRunAction::~p2pRunAction() {
@@ -9,6 +10,7 @@ p2pRunAction::~p2pRunAction() {
 
 void p2pRunAction::BeginOfRunAction(const G4Run*){
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
+	manager->SetNtupleMerging(true);
 	manager->OpenFile("data.root");
 
 	//Data for particles entering inner detector
@@ -28,7 +30,7 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 	manager->CreateNtupleDColumn("Z");
 	manager->FinishNtuple(1);
 
-	manager->CreateNtuple("Particles", "Energy");
+	manager->CreateNtuple("Particles","Energy");
 	manager->CreateNtupleDColumn("E1");
 	manager->CreateNtupleDColumn("E2");
 	manager->FinishNtuple(2);

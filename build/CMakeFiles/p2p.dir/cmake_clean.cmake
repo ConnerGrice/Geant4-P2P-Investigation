@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o"
+  "CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorActionFile.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorMessenger.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o"

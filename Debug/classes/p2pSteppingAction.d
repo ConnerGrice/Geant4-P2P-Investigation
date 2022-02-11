@@ -541,6 +541,8 @@ classes/p2pSteppingAction.o: ../classes/p2pSteppingAction.cpp \
  ../classes/p2pEventAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserEventAction.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleGun.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh \
  ../classes/p2pRunAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh
 
@@ -1627,6 +1629,10 @@ classes/p2pSteppingAction.o: ../classes/p2pSteppingAction.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserEventAction.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ParticleGun.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh:
 
 ../classes/p2pRunAction.h:
 

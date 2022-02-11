@@ -14,6 +14,7 @@ void p2pEventAction::BeginOfEventAction(const G4Event*){
 	Edep2 = 0;
 
 
+
 }
 
 void p2pEventAction::EndOfEventAction(const G4Event*){

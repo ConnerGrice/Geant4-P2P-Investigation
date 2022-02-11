@@ -4,6 +4,7 @@
 #include <G4EventManager.hh>
 #include <G4UserEventAction.hh>
 #include <g4root.hh>
+#include <G4ParticleGun.hh>
 
 #include "p2pRunAction.h"
 

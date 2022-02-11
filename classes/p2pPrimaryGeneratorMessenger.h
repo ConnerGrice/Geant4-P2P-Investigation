@@ -3,23 +3,21 @@
 
 #include <G4UImessenger.hh>
 #include <G4UIcmdWithAString.hh>
+#include <G4UIdirectory.hh>
+#include <globals.hh>
 
-#include "p2pPrimaryGeneratorAction.h"
+class p2pPrimaryGeneratorAction;
 
 class p2pPrimaryGeneratorMessenger: public G4UImessenger {
 public:
-	p2pPrimaryGeneratorMessenger(p2pPrimaryGeneratorAction* gun);
+	p2pPrimaryGeneratorMessenger(p2pPrimaryGeneratorAction*);
 	virtual ~p2pPrimaryGeneratorMessenger();
-
-	void SetNewParam();
-
+	void SetNewValue(G4UIcommand*,G4String);
 private:
-	p2pPrimaryGeneratorAction* generator;
-	G4UIdirectory* dir;
-	G4UIcmdWithAString* fActioncmd;
-
-
+	p2pPrimaryGeneratorAction* Action;
+	G4UIdirectory* fDir;
+	G4UIcmdWithAString* fMessenger;
 
 };
 
-#endif /* CLASSES_P2PPRIMARYGENERATORMESSANGER_H_ */
+#endif /* CLASSES_P2PPRIMARYGENERATORMESSENGER_H_ */
