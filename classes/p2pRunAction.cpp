@@ -2,16 +2,11 @@
 
 p2pRunAction::p2pRunAction() : G4UserRunAction() {
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
-}
-
-p2pRunAction::~p2pRunAction() {
-	delete G4AnalysisManager::Instance();
-}
-
-void p2pRunAction::BeginOfRunAction(const G4Run*){
-	G4AnalysisManager* manager = G4AnalysisManager::Instance();
+	G4cout<<"Run Managertype: "<<G4RunManager::GetRunManager()->GetRunManagerType()<<G4endl;
 	manager->SetNtupleMerging(true);
-	manager->OpenFile("data.root");
+	manager->SetVerboseLevel(1);
+
+	manager->SetFileName("data.root");
 
 	//Data for particles entering inner detector
 	manager->CreateNtuple("Inner","Position");
@@ -34,6 +29,20 @@ void p2pRunAction::BeginOfRunAction(const G4Run*){
 	manager->CreateNtupleDColumn("E1");
 	manager->CreateNtupleDColumn("E2");
 	manager->FinishNtuple(2);
+
+
+}
+
+p2pRunAction::~p2pRunAction() {
+	delete G4AnalysisManager::Instance();
+}
+
+void p2pRunAction::BeginOfRunAction(const G4Run* run){
+	G4AnalysisManager* manager = G4AnalysisManager::Instance();
+	manager->OpenFile();
+	G4cout<<G4RunManager::GetRunManager()->GetRunManagerType()<<G4endl;
+
+
 }
 
 void p2pRunAction::EndOfRunAction(const G4Run*){
@@ -43,5 +52,7 @@ void p2pRunAction::EndOfRunAction(const G4Run*){
 
 	manager->Write();
 	manager->CloseFile();
+
+	//delete G4AnalysisManager::Instance();
 
 }

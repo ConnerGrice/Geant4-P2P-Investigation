@@ -285,6 +285,7 @@ classes/p2pPrimaryGeneratorAction.o: \
  /usr/local/geant4.10.07.p02/include/Geant4/tools/ntuple_binding \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TRNtupleManager.icc \
  /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh \
  ../classes/p2pPrimaryGeneratorMessenger.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
@@ -865,6 +866,8 @@ classes/p2pPrimaryGeneratorAction.o: \
 /usr/local/geant4.10.07.p02/include/Geant4/G4TRNtupleManager.icc:
 
 /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh:
 
 ../classes/p2pPrimaryGeneratorMessenger.h:
 

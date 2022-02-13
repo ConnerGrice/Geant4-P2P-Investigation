@@ -9,7 +9,7 @@ p2pPrimaryGeneratorMessenger::p2pPrimaryGeneratorMessenger(p2pPrimaryGeneratorAc
 
 	fMessenger = new G4UIcmdWithAString("/gunControl/read",this);	//Defining command keyword
 	fMessenger->SetGuidance("ROOT file input to be read");	//Description of command
-	fMessenger->SetParameterName("File", true);	//Name of parameter
+	fMessenger->SetParameterName("File", true,true);	//Name of parameter
 	fMessenger->SetDefaultValue("quasi.root");	//Default parameter
 
 
@@ -22,7 +22,5 @@ p2pPrimaryGeneratorMessenger::~p2pPrimaryGeneratorMessenger() {
 
 void p2pPrimaryGeneratorMessenger::SetNewValue(G4UIcommand* cmd, G4String file){
 	//Runs SetGunParam method in generator action
-	if(cmd == fMessenger){
-		Action->SetGunParam1(file);
-	}
+	if(cmd == fMessenger){Action->SetGunParam1(file);}
 }

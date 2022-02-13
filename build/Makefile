@@ -277,33 +277,6 @@ classes/p2pPrimaryGeneratorAction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.s
 .PHONY : classes/p2pPrimaryGeneratorAction.cpp.s
 
-classes/p2pPrimaryGeneratorActionFile.o: classes/p2pPrimaryGeneratorActionFile.cpp.o
-
-.PHONY : classes/p2pPrimaryGeneratorActionFile.o
-
-# target to build an object file
-classes/p2pPrimaryGeneratorActionFile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorActionFile.cpp.o
-.PHONY : classes/p2pPrimaryGeneratorActionFile.cpp.o
-
-classes/p2pPrimaryGeneratorActionFile.i: classes/p2pPrimaryGeneratorActionFile.cpp.i
-
-.PHONY : classes/p2pPrimaryGeneratorActionFile.i
-
-# target to preprocess a source file
-classes/p2pPrimaryGeneratorActionFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorActionFile.cpp.i
-.PHONY : classes/p2pPrimaryGeneratorActionFile.cpp.i
-
-classes/p2pPrimaryGeneratorActionFile.s: classes/p2pPrimaryGeneratorActionFile.cpp.s
-
-.PHONY : classes/p2pPrimaryGeneratorActionFile.s
-
-# target to generate assembly for a file
-classes/p2pPrimaryGeneratorActionFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorActionFile.cpp.s
-.PHONY : classes/p2pPrimaryGeneratorActionFile.cpp.s
-
 classes/p2pPrimaryGeneratorMessenger.o: classes/p2pPrimaryGeneratorMessenger.cpp.o
 
 .PHONY : classes/p2pPrimaryGeneratorMessenger.o
@@ -463,9 +436,6 @@ help:
 	@echo "... classes/p2pPrimaryGeneratorAction.o"
 	@echo "... classes/p2pPrimaryGeneratorAction.i"
 	@echo "... classes/p2pPrimaryGeneratorAction.s"
-	@echo "... classes/p2pPrimaryGeneratorActionFile.o"
-	@echo "... classes/p2pPrimaryGeneratorActionFile.i"
-	@echo "... classes/p2pPrimaryGeneratorActionFile.s"
 	@echo "... classes/p2pPrimaryGeneratorMessenger.o"
 	@echo "... classes/p2pPrimaryGeneratorMessenger.i"
 	@echo "... classes/p2pPrimaryGeneratorMessenger.s"

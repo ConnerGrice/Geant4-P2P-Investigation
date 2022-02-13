@@ -3,6 +3,8 @@
 
 #include <G4UserRunAction.hh>
 #include <g4root.hh>
+#include <G4Threading.hh>
+#include <G4RunManager.hh>
 
 class p2pRunAction: public G4UserRunAction {
 public:

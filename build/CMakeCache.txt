@@ -237,6 +237,9 @@ Fontconfig_INCLUDE_DIR:PATH=/usr/include
 Fontconfig_LIBRARY:FILEPATH=/usr/lib64/libfontconfig.so
 
 //No help, variable specified on the command line.
+GEANT4_BUILD_MULTITHREADED:UNINITIALIZED=OFF
+
+//No help, variable specified on the command line.
 Geant4-DIR:UNINITIALIZED=/usr/local/geant4.10.07.p02/lib64/Geant4-10.7.2
 
 //No help, variable specified on the command line.

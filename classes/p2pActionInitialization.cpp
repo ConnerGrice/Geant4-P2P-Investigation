@@ -20,3 +20,8 @@ void p2pActionInitialization::Build() const{
 	SetUserAction(step);
 }
 
+void p2pActionInitialization::BuildForMaster() const{
+
+	SetUserAction(new p2pRunAction());
+}
+

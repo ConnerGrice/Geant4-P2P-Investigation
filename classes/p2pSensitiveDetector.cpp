@@ -67,11 +67,11 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	//G4cout<<"Exact: 	"<<prePos<<G4endl;
 	//G4cout<<"Calculated:"<<detPos<<G4endl;
 
-	G4cout<<"Track: "<<trackID <<G4endl;
-	G4cout<<"Momentum: "<<momMag<<G4endl;
-	G4cout<<"Direction: "<<detDir<<G4endl;
-	G4cout<<"Mom Dir: "<<momCal<<G4endl;
-	G4cout<<"Mom Exa: "<<mom<<G4endl;
+	//G4cout<<"Track: "<<trackID <<G4endl;
+	//G4cout<<"Momentum: "<<momMag<<G4endl;
+	//G4cout<<"Direction: "<<detDir<<G4endl;
+	//G4cout<<"Mom Dir: "<<momCal<<G4endl;
+	//G4cout<<"Mom Exa: "<<mom<<G4endl;
 
 
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();

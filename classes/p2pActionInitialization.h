@@ -15,6 +15,7 @@ public:
 	virtual ~p2pActionInitialization();
 
 	virtual void Build() const;
+	virtual void BuildForMaster() const;
 };
 
 #endif /* CLASSES_P2PACTIONINITIALIZATION_H_ */
