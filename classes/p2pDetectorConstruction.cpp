@@ -35,8 +35,8 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	G4double calMax = calMin+calThick;
 
 	G4Sphere* solidCal= new G4Sphere("Calorimeter",calMin,calMax,0,2*M_PI,0,M_PI);
-	G4LogicalVolume* logicCal = new G4LogicalVolume(solidCal,detectorMat,"Colorimeter");
-	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicCal,"Colorimeter",logicWorld,false,3,checkOverlaps);
+	G4LogicalVolume* logicCal = new G4LogicalVolume(solidCal,detectorMat,"Calorimeter");
+	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicCal,"Calorimeter",logicWorld,false,3,checkOverlaps);
 
 	fScoringVolume = logicCal;
 

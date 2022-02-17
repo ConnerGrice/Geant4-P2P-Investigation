@@ -2,7 +2,6 @@
 
 p2pRunAction::p2pRunAction() : G4UserRunAction() {
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
-	G4cout<<"Run Managertype: "<<G4RunManager::GetRunManager()->GetRunManagerType()<<G4endl;
 	manager->SetNtupleMerging(true);
 	manager->SetVerboseLevel(1);
 
@@ -37,10 +36,9 @@ p2pRunAction::~p2pRunAction() {
 	delete G4AnalysisManager::Instance();
 }
 
-void p2pRunAction::BeginOfRunAction(const G4Run* run){
+void p2pRunAction::BeginOfRunAction(const G4Run*){
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	manager->OpenFile();
-	G4cout<<G4RunManager::GetRunManager()->GetRunManagerType()<<G4endl;
 
 
 }
