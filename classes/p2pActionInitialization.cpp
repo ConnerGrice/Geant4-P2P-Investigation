@@ -7,6 +7,7 @@ p2pActionInitialization::p2pActionInitialization() : G4VUserActionInitialization
 p2pActionInitialization::~p2pActionInitialization() {
 }
 
+//These methods tell the program which native classes sohuld be overridden with my user made classes
 void p2pActionInitialization::Build() const{
 	SetUserAction(new p2pPrimaryGeneratorAction);
 
@@ -20,6 +21,7 @@ void p2pActionInitialization::Build() const{
 	SetUserAction(step);
 }
 
+//This is for multithreading mode
 void p2pActionInitialization::BuildForMaster() const{
 
 	SetUserAction(new p2pRunAction());

@@ -7,29 +7,27 @@ p2pSensitiveDetector::~p2pSensitiveDetector() {
 }
 
 G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
+
+	//Track related variables
 	G4Track* track = aStep->GetTrack();
-	//track->SetTrackStatus(fStopAndKill);
 	G4int trackID = track->GetTrackID();
 
 	//Gets position of particles hitting detector
 	G4StepPoint* preStepPoint = aStep->GetPreStepPoint();
 	G4ThreeVector prePos = preStepPoint->GetPosition();
 
-	G4ThreeVector mom = preStepPoint->GetMomentum();
-	G4double momMag = mom.mag();
 
 	//Gets the copy number of hit detector
 	const G4VTouchable* touchable = preStepPoint->GetTouchable();
 	G4int copyNo = touchable->GetCopyNumber();
 
-	//Gets event number
-	//G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
 	//Gets translation and rotation of detector segment that was hit
 	G4VPhysicalVolume* physVol = touchable->GetVolume();
 	G4ThreeVector posDetector = physVol->GetTranslation();
 	G4RotationMatrix* rotDetector = physVol->GetRotation();
 
+	//Gets actual angle of segment from horizontal
 	G4double theta = (rotDetector->getPsi())*2;
 
 	G4int numSeg = 31;				//Number of segments
@@ -57,23 +55,33 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		break;
 	}
 
+	//MAY BE USEFUL FOR DEBUGGING
+	/*
+	//Gets event number
+	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+	G4ThreeVector mom = preStepPoint->GetMomentum();
+	G4double momMag = mom.mag();
+
 	G4ThreeVector detDir = detPos.unit();
 	G4ThreeVector momCal = momMag*detDir;
 
 
 	//positions in mm
-	//G4cout<<"Hit: 		"<<copyNo<<G4endl;
-	//G4cout<<"Psi: 		"<<delta<<G4endl;
-	//G4cout<<"Exact: 	"<<prePos<<G4endl;
-	//G4cout<<"Calculated:"<<detPos<<G4endl;
+	G4cout<<"Hit: 		"<<copyNo<<G4endl;
+	G4cout<<"Psi: 		"<<delta<<G4endl;
+	G4cout<<"Exact: 	"<<prePos<<G4endl;
+	G4cout<<"Calculated:"<<detPos<<G4endl;
 
-	//G4cout<<"Track: "<<trackID <<G4endl;
-	//G4cout<<"Momentum: "<<momMag<<G4endl;
-	//G4cout<<"Direction: "<<detDir<<G4endl;
-	//G4cout<<"Mom Dir: "<<momCal<<G4endl;
-	//G4cout<<"Mom Exa: "<<mom<<G4endl;
+	G4cout<<"Track: "<<trackID <<G4endl;
+	G4cout<<"Momentum: "<<momMag<<G4endl;
+	G4cout<<"Direction: "<<detDir<<G4endl;
+	G4cout<<"Mom Dir: "<<momCal<<G4endl;
+	G4cout<<"Mom Exa: "<<mom<<G4endl;
 
+	*/
 
+	//Records the coordinates of the datactor segment hit
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 
 	//copyNo = 0 (Inner), copyNo = 1 (Outer)
@@ -81,7 +89,6 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
 	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
 	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
-	//if (copyNo == 0){manager->FillNtupleDColumn(copyNo,4,momMag);}
 	manager->AddNtupleRow(copyNo);
 	return true;
 }

@@ -494,7 +494,19 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryVertex.hh \
  ../classes/p2pRunAction.h \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VDigiCollection.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VUserEventInformation.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh
 
 ../classes/p2pEventAction.h:
 
@@ -1487,3 +1499,27 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
 ../classes/p2pRunAction.h:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VDigiCollection.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VUserEventInformation.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh:

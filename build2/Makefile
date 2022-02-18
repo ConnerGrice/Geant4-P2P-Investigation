@@ -277,33 +277,6 @@ classes/p2pPrimaryGeneratorAction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.s
 .PHONY : classes/p2pPrimaryGeneratorAction.cpp.s
 
-classes/p2pPrimaryGeneratorMessenger.o: classes/p2pPrimaryGeneratorMessenger.cpp.o
-
-.PHONY : classes/p2pPrimaryGeneratorMessenger.o
-
-# target to build an object file
-classes/p2pPrimaryGeneratorMessenger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorMessenger.cpp.o
-.PHONY : classes/p2pPrimaryGeneratorMessenger.cpp.o
-
-classes/p2pPrimaryGeneratorMessenger.i: classes/p2pPrimaryGeneratorMessenger.cpp.i
-
-.PHONY : classes/p2pPrimaryGeneratorMessenger.i
-
-# target to preprocess a source file
-classes/p2pPrimaryGeneratorMessenger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorMessenger.cpp.i
-.PHONY : classes/p2pPrimaryGeneratorMessenger.cpp.i
-
-classes/p2pPrimaryGeneratorMessenger.s: classes/p2pPrimaryGeneratorMessenger.cpp.s
-
-.PHONY : classes/p2pPrimaryGeneratorMessenger.s
-
-# target to generate assembly for a file
-classes/p2pPrimaryGeneratorMessenger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorMessenger.cpp.s
-.PHONY : classes/p2pPrimaryGeneratorMessenger.cpp.s
-
 classes/p2pRunAction.o: classes/p2pRunAction.cpp.o
 
 .PHONY : classes/p2pRunAction.o
@@ -436,9 +409,6 @@ help:
 	@echo "... classes/p2pPrimaryGeneratorAction.o"
 	@echo "... classes/p2pPrimaryGeneratorAction.i"
 	@echo "... classes/p2pPrimaryGeneratorAction.s"
-	@echo "... classes/p2pPrimaryGeneratorMessenger.o"
-	@echo "... classes/p2pPrimaryGeneratorMessenger.i"
-	@echo "... classes/p2pPrimaryGeneratorMessenger.s"
 	@echo "... classes/p2pRunAction.o"
 	@echo "... classes/p2pRunAction.i"
 	@echo "... classes/p2pRunAction.s"

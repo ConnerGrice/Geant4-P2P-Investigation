@@ -21,6 +21,7 @@ void p2pEventAction::EndOfEventAction(const G4Event*){
 	G4cout<<"Energy Deposition 1: "<<Edep1<<G4endl;
 	G4cout<<"Energy Deposition 2: "<<Edep2<<G4endl;
 
+	//Records final energy deposition by each particle
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	manager->FillNtupleDColumn(2,0,Edep1);
 	manager->FillNtupleDColumn(2,1,Edep2);

@@ -9,6 +9,11 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include classes/subdir.mk
+-include build2/CMakeFiles/p2p.dir/classes/subdir.mk
+-include build2/CMakeFiles/p2p.dir/subdir.mk
+-include build2/CMakeFiles/3.18.2/CompilerIdCXX/subdir.mk
+-include build2/CMakeFiles/3.18.2/CompilerIdC/subdir.mk
+-include build2/subdir.mk
 -include build/CMakeFiles/p2p.dir/classes/subdir.mk
 -include build/CMakeFiles/p2p.dir/subdir.mk
 -include build/CMakeFiles/3.18.2/CompilerIdCXX/subdir.mk

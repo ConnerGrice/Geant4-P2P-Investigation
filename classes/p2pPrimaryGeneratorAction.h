@@ -12,7 +12,6 @@
 #include <g4root.hh>
 #include <G4RootAnalysisReader.hh>
 
-#include "p2pPrimaryGeneratorMessenger.h"
 class p2pPrimaryGeneratorAction: public G4VUserPrimaryGeneratorAction {
 public:
 	p2pPrimaryGeneratorAction();
@@ -25,7 +24,6 @@ public:
 
 private:
 	G4ParticleGun* fParticleGun;
-	p2pPrimaryGeneratorMessenger* fMessenger;
 };
 
 #endif /* CLASSES_P2PPRIMARYGENERATORACTION_H_ */

@@ -20,10 +20,10 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	G4bool checkOverlaps = true;
 
-	//WOrld
-	G4double worldx = 50*cm;
-	G4double worldy = 50*cm;
-	G4double worldz = 50*cm;
+	//World
+	G4double worldx = 100*cm;
+	G4double worldy = 100*cm;
+	G4double worldz = 100*cm;
 
 	G4Box* solidWorld = new G4Box("World",worldx,worldy,worldz);
 	G4LogicalVolume* logicWorld = new G4LogicalVolume(solidWorld,worldMat,"World");
@@ -31,7 +31,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	//Spherical calorimeter
 	G4double calMin = 20*cm;
-	G4double calThick = 30*cm;
+	G4double calThick = 80*cm;
 	G4double calMax = calMin+calThick;
 
 	G4Sphere* solidCal= new G4Sphere("Calorimeter",calMin,calMax,0,2*M_PI,0,M_PI);
@@ -89,6 +89,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 }
 
 void p2pDetectorConstruction::ConstructSDandField(){
+	//Defining which parts of the geometry will become the sensitive detectors
 	logicInn->SetSensitiveDetector(new p2pSensitiveDetector("InnerSens"));
 	logicOut->SetSensitiveDetector(new p2pSensitiveDetector("OuterSens"));
 }

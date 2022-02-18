@@ -287,19 +287,12 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TRNtupleManager.icc \
  /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh \
- ../classes/p2pPrimaryGeneratorMessenger.h \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/globals.hh \
  ../classes/p2pRunAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh \
- ../classes/p2pEventAction.h \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4StackManager.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserStackingAction.hh \
@@ -514,7 +507,16 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VSteppingVerbose.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TrackingMessenger.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserTrackingAction.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh \
+ ../classes/p2pEventAction.h \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserEventAction.hh \
  ../classes/p2pSteppingAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserSteppingAction.hh \
@@ -553,12 +555,7 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VReadOutGeometry.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4CollectionNameVector.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh
 
 ../classes/p2pActionInitialization.h:
 
@@ -1136,31 +1133,17 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh:
 
-../classes/p2pPrimaryGeneratorMessenger.h:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/globals.hh:
-
 ../classes/p2pRunAction.h:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh:
 
-../classes/p2pEventAction.h:
+/usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
 
@@ -1590,7 +1573,25 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh:
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh:
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserTrackingAction.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh:
+
+../classes/p2pEventAction.h:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserEventAction.hh:
 
@@ -1669,13 +1670,3 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4CollectionNameVector.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh:

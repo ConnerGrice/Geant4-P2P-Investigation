@@ -9,7 +9,6 @@ CPP_SRCS += \
 ../classes/p2pEventAction.cpp \
 ../classes/p2pPhysicsList.cpp \
 ../classes/p2pPrimaryGeneratorAction.cpp \
-../classes/p2pPrimaryGeneratorMessenger.cpp \
 ../classes/p2pRunAction.cpp \
 ../classes/p2pSensitiveDetector.cpp \
 ../classes/p2pSteppingAction.cpp 
@@ -20,7 +19,6 @@ OBJS += \
 ./classes/p2pEventAction.o \
 ./classes/p2pPhysicsList.o \
 ./classes/p2pPrimaryGeneratorAction.o \
-./classes/p2pPrimaryGeneratorMessenger.o \
 ./classes/p2pRunAction.o \
 ./classes/p2pSensitiveDetector.o \
 ./classes/p2pSteppingAction.o 
@@ -31,7 +29,6 @@ CPP_DEPS += \
 ./classes/p2pEventAction.d \
 ./classes/p2pPhysicsList.d \
 ./classes/p2pPrimaryGeneratorAction.d \
-./classes/p2pPrimaryGeneratorMessenger.d \
 ./classes/p2pRunAction.d \
 ./classes/p2pSensitiveDetector.d \
 ./classes/p2pSteppingAction.d 

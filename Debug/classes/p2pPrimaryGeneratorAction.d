@@ -285,17 +285,7 @@ classes/p2pPrimaryGeneratorAction.o: \
  /usr/local/geant4.10.07.p02/include/Geant4/tools/ntuple_binding \
  /usr/local/geant4.10.07.p02/include/Geant4/G4TRNtupleManager.icc \
  /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh \
- ../classes/p2pPrimaryGeneratorMessenger.h \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh
 
 ../classes/p2pPrimaryGeneratorAction.h:
 
@@ -868,23 +858,3 @@ classes/p2pPrimaryGeneratorAction.o: \
 /usr/local/geant4.10.07.p02/include/Geant4/g4hntools_defs.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4RootAnalysisReader.hh:
-
-../classes/p2pPrimaryGeneratorMessenger.h:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIparameter.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UItokenNum.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIcmdWithAString.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4UIdirectory.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/globals.hh:
