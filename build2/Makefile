@@ -223,6 +223,33 @@ classes/p2pEventAction.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.s
 .PHONY : classes/p2pEventAction.cpp.s
 
+classes/p2pHit.o: classes/p2pHit.cpp.o
+
+.PHONY : classes/p2pHit.o
+
+# target to build an object file
+classes/p2pHit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pHit.cpp.o
+.PHONY : classes/p2pHit.cpp.o
+
+classes/p2pHit.i: classes/p2pHit.cpp.i
+
+.PHONY : classes/p2pHit.i
+
+# target to preprocess a source file
+classes/p2pHit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pHit.cpp.i
+.PHONY : classes/p2pHit.cpp.i
+
+classes/p2pHit.s: classes/p2pHit.cpp.s
+
+.PHONY : classes/p2pHit.s
+
+# target to generate assembly for a file
+classes/p2pHit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/p2p.dir/build.make CMakeFiles/p2p.dir/classes/p2pHit.cpp.s
+.PHONY : classes/p2pHit.cpp.s
+
 classes/p2pPhysicsList.o: classes/p2pPhysicsList.cpp.o
 
 .PHONY : classes/p2pPhysicsList.o
@@ -403,6 +430,9 @@ help:
 	@echo "... classes/p2pEventAction.o"
 	@echo "... classes/p2pEventAction.i"
 	@echo "... classes/p2pEventAction.s"
+	@echo "... classes/p2pHit.o"
+	@echo "... classes/p2pHit.i"
+	@echo "... classes/p2pHit.s"
 	@echo "... classes/p2pPhysicsList.o"
 	@echo "... classes/p2pPhysicsList.i"
 	@echo "... classes/p2pPhysicsList.s"

@@ -1,4 +1,5 @@
 #include <math.h>
+#include <vector>
 #include <TTree.h>
 #include <TFile.h>
 #include <TH1F.h>
@@ -17,7 +18,10 @@ double momentum(double energy, const double mass){
 
 void missingmass(){
 
-	TH1F* missHist = new TH1F("missHist","Missing Mass",1000,-100,100);
+	TH1F* missHist = new TH1F("missHist","Missing Mass",1000,-1100,-1500);
+
+	missHist->GetXaxis()->SetTitle("Missing Mass (eV/c^2)");
+	missHist->GetYaxis()->SetTitle("Frequency");
 
 
 	//Gets data file
@@ -47,11 +51,13 @@ void missingmass(){
 	TTreeReaderValue<double> innX = {reader,"X"};	//Inner detector X coord
 	TTreeReaderValue<double> innY = {reader,"Y"};	//Inner detector Y coord
 	TTreeReaderValue<double> innZ = {reader,"Z"};	//Inner detector Z coord
+	TTreeReaderValue<int> innEvent = {reader,"Event"};
 
 	TTreeReaderValue<int> outID = {reader,"Outer.ID"};	//Track ID
 	TTreeReaderValue<double> outX = {reader,"Outer.X"};//Outer detector X coord
 	TTreeReaderValue<double> outY = {reader,"Outer.Y"};//Outer detector Y coord
 	TTreeReaderValue<double> outZ = {reader,"Outer.Z"};//Outer detector Z coord
+	TTreeReaderValue<int> outEvent = {reader,"Outer.Event"};
 
 	TTreeReaderValue<double> E1 = {reader,"Protons.E1"};//Particle 1 energy
 	TTreeReaderValue<double> E2 = {reader,"Protons.E2"};//Particle 2 energy
@@ -100,17 +106,25 @@ void missingmass(){
 	//Missing mass
 	double missingMass;	//Missing mass value
 
-	int c = 1;
+	//Data Vectors
+	std::vector<double> pro1;
+	std::vector<double> pro2;
+
+	int c;
+	while (reader.Next()){
+
+		std::cout<<c<<"\n";
+		//std::cout<<"Inner ID: "<<*innID<<"\n";
+		std::cout<<"Inner Ev: "<<*innEvent<<"\n";
+		//std::cout<<"Outer ID: "<<*outID<<"\n";
+		std::cout<<"Outer Ev: "<<*outEvent<<std::endl;
+		c++;
+	}
+
+
+	/*
 	//Loops through inner tree
-	while (reader.Next() && c <= 100240){
-		/*
-		std::cout<<"Reaction "<<c<<":"<<std::endl;
-		std::cout<<"Inn ID: "<<*innID<<std::endl;
-		std::cout<<"Out ID: "<<*outID<<std::endl;
-		std::cout<<"Pro E1: "<<*E1<<std::endl;
-		std::cout<<"Pro E2: "<<*E2<<std::endl;
-		std::cout<<"Frag P: ("<<*fragX<<","<<*fragY<<","<<*fragZ<<")"<<std::endl;
-		*/
+	while (reader.Next()){
 
 		//Defines fragment momentum and 4-momentum
 		frag = TVector3(*fragX,*fragY,*fragZ);
@@ -145,27 +159,27 @@ void missingmass(){
 			//Gets momentum 4-vector
 			lmom2.SetPxPyPzE(mom2.X(),mom2.Y(),mom2.Z(),*E2);
 		}
-		c++;
 		momOut = lmom1+lmom2;
 		momInit = lbeam + ltarget;
 		momMiss = momInit - momOut;
 
 		missingMass = momMiss.M()-fragM;
 
+		std::cout<<*innID<<","<<*outID<<std::endl;
 
 		std::cout<<"Missing Mass: "<<missingMass<<" MeV/c^2"<<std::endl;
 
 		missHist->Fill(missingMass);
 	}
+	*/
 
+	/*
 	TCanvas* cv = new TCanvas();
-
-	missHist->GetXaxis()->SetTitle("Missing Mass (MeV/c^2)");
 	missHist->Draw();
-	//Gets total momentum 4 vector of both outgoing particles
 
-	cv->SaveAs("missing.root");
-
+	cv->SaveAs("figs/missing.root");
+	cv->Print("figs/missing.eps");
+	*/
 	input.Close();
 	quasi.Close();
 }

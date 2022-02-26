@@ -1,25 +1,38 @@
 #include "p2pSensitiveDetector.h"
 
-p2pSensitiveDetector::p2pSensitiveDetector(G4String name) : G4VSensitiveDetector(name) {
+p2pSensitiveDetector::p2pSensitiveDetector(G4String name) : G4VSensitiveDetector(name){
+
+	collectionName.insert("FlagTracker");
 }
 
 p2pSensitiveDetector::~p2pSensitiveDetector() {
 }
 
+void p2pSensitiveDetector::Initialize(G4HCofThisEvent* hce){
+
+	fHitsCollection = new p2pHitsCollection(SensitiveDetectorName,collectionName[0]);
+
+	G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
+
+	hce->AddHitsCollection(hcID,fHitsCollection);
+
+}
+
 G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 
-	//Track related variables
-	G4Track* track = aStep->GetTrack();
-	G4int trackID = track->GetTrackID();
 
 	//Gets position of particles hitting detector
 	G4StepPoint* preStepPoint = aStep->GetPreStepPoint();
 	G4ThreeVector prePos = preStepPoint->GetPosition();
 
-
 	//Gets the copy number of hit detector
 	const G4VTouchable* touchable = preStepPoint->GetTouchable();
 	G4int copyNo = touchable->GetCopyNumber();
+
+	//Track related variables
+	G4Track* track = aStep->GetTrack();
+	G4int trackID = track->GetTrackID();
+
 
 
 	//Gets translation and rotation of detector segment that was hit
@@ -30,7 +43,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	//Gets actual angle of segment from horizontal
 	G4double theta = (rotDetector->getPsi())*2;
 
-	G4int numSeg = 31;				//Number of segments
+	G4int numSeg = 100;				//Number of segments
 	G4double thick = 0.5*mm;		//Thickness of tubes (0.5mm)
 	G4double innMin = 5*cm;			//Inner inner radius
 	G4double gap = 3*cm;			//Gap between detectors
@@ -80,16 +93,41 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	G4cout<<"Mom Exa: "<<mom<<G4endl;
 
 	*/
+	//Gets event number
 
-	//Records the coordinates of the datactor segment hit
+	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+
+	//G4cout<<"Event: "<<event<<",Detector: "<<copyNo<<","<<"Particle: "<<trackID<<G4endl;
+
+	auto newHit = new p2pHit();
+
+
+	if (copyNo == 0){newHit->InnHit();}
+	if (copyNo == 1){newHit->OutHit();}
+	//newHit->Print();
+
+
+	fHitsCollection->insert(newHit);
+
+	//G4cout<<"Number of Hits: "<<fHitsCollection->entries()<<G4endl;
+	//G4cout<<"Inner: "<<newHit->GetInnFlag()<<G4endl;
+	//G4cout<<"Outer: "<<newHit->GetOutFlag()<<G4endl;
+
+
+	//Records the coordinates of the detector segment hit
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
-
-	//copyNo = 0 (Inner), copyNo = 1 (Outer)
-	manager->FillNtupleIColumn(copyNo,0,trackID);
-	manager->FillNtupleDColumn(copyNo,1,detPos[0]);
-	manager->FillNtupleDColumn(copyNo,2,detPos[1]);
-	manager->FillNtupleDColumn(copyNo,3,detPos[2]);
-	manager->AddNtupleRow(copyNo);
+	if (trackID == 1 || trackID == 2){
+		//copyNo = 0 (Inner), copyNo = 1 (Outer)
+		manager->FillNtupleIColumn(copyNo,0,trackID);
+		manager->FillNtupleDColumn(copyNo,1,detPos[0]);
+		manager->FillNtupleDColumn(copyNo,2,detPos[1]);
+		manager->FillNtupleDColumn(copyNo,3,detPos[2]);
+		manager->FillNtupleIColumn(copyNo,4,event);
+		manager->AddNtupleRow(copyNo);
+	}
 	return true;
 }
 
+void p2pSensitiveDetector::EndOfEvent(G4HCofThisEvent* hce){
+	G4cout<<"TEST"<<G4endl;
+}

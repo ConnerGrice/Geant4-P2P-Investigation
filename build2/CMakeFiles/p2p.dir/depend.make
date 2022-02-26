@@ -5,6 +5,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pActionIn
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pActionInitialization.h
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pDetectorConstruction.h
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pEventAction.h
+CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pPrimaryGeneratorAction.h
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pRunAction.h
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: ../classes/p2pSensitiveDetector.h
@@ -153,6 +154,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -250,6 +252,8 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -276,6 +280,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
 CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -491,6 +496,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o: /usr/local/geant4.10.0
 
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: ../classes/p2pDetectorConstruction.cpp
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: ../classes/p2pDetectorConstruction.h
+CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: ../classes/p2pSensitiveDetector.h
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/Normal3D.h
@@ -636,6 +642,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -729,6 +736,8 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RotationMatrix.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -755,6 +764,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.0
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -1400,6 +1410,26 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/inc
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/tree
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/wbuf
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/trkdefs.hh
+
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: ../classes/p2pHit.cpp
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: ../classes/p2pHit.h
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Allocator.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4AllocatorPool.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4EnvironmentUtils.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Exception.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ExceptionSeverity.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4GlobalConfig.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4String.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4String.icc
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ios.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/templates.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/tls.hh
 
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o: ../classes/p2pPhysicsList.cpp
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o: ../classes/p2pPhysicsList.h
@@ -2098,6 +2128,7 @@ CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o: /usr/local/geant4.10.07.p02/inclu
 CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/wbuf
 CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/trkdefs.hh
 
+CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: ../classes/p2pSensitiveDetector.cpp
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: ../classes/p2pSensitiveDetector.h
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
@@ -2237,6 +2268,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4IonisParamElm.hh
@@ -2317,6 +2349,8 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RotationMatrix.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -2341,6 +2375,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -2538,6 +2573,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o: /usr/local/geant4.10.07.p
 
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pDetectorConstruction.h
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pEventAction.h
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pRunAction.h
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pSensitiveDetector.h
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: ../classes/p2pSteppingAction.cpp
@@ -2686,6 +2722,7 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -2781,6 +2818,8 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -2807,6 +2846,7 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -3022,6 +3062,7 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o: /usr/local/geant4.10.07.p02/
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pActionInitialization.h
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pDetectorConstruction.h
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pEventAction.h
+CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pPhysicsList.h
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pPrimaryGeneratorAction.h
 CMakeFiles/p2p.dir/p2p.cpp.o: ../classes/p2pRunAction.h
@@ -3184,6 +3225,7 @@ CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H1Too
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HepRep.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HepRepFile.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4HepRepFileXMLWriter.hh
@@ -3311,6 +3353,8 @@ CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Run.h
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerFactory.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Scene.hh
 CMakeFiles/p2p.dir/p2p.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Scene.icc

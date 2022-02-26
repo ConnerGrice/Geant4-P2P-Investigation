@@ -6,6 +6,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pActionInitialization.h
  /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
  /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
@@ -154,6 +155,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -251,6 +253,8 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -277,6 +281,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -492,6 +497,7 @@ CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o
 CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.cpp
  /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/Normal3D.h
@@ -637,6 +643,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -730,6 +737,8 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4RotationMatrix.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -756,6 +765,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -1401,6 +1411,26 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/tree
  /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/wbuf
  /usr/local/geant4.10.07.p02/include/Geant4/trkdefs.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.cpp
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Allocator.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4AllocatorPool.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4EnvironmentUtils.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Exception.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ExceptionSeverity.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4GlobalConfig.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4String.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4String.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ios.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/templates.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/tls.hh
 CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pPhysicsList.cpp
  /home/local1/eclipse-workspace/p2p/classes/p2pPhysicsList.h
@@ -2099,6 +2129,7 @@ CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/tools/wroot/wbuf
  /usr/local/geant4.10.07.p02/include/Geant4/trkdefs.hh
 CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.cpp
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
@@ -2238,6 +2269,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4IonisParamElm.hh
@@ -2318,6 +2350,8 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4RotationMatrix.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -2342,6 +2376,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -2539,6 +2574,7 @@ CMakeFiles/p2p.dir/classes/p2pSensitiveDetector.cpp.o
 CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
  /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
  /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.cpp
@@ -2687,6 +2723,7 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4ICRU90StoppingData.hh
@@ -2782,6 +2819,8 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4Run.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SensitiveVolumeList.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SmartTrackStack.hh
@@ -2808,6 +2847,7 @@ CMakeFiles/p2p.dir/classes/p2pSteppingAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -3023,6 +3063,7 @@ CMakeFiles/p2p.dir/p2p.cpp.o
  ../classes/p2pActionInitialization.h
  ../classes/p2pDetectorConstruction.h
  ../classes/p2pEventAction.h
+ ../classes/p2pHit.h
  ../classes/p2pPhysicsList.h
  ../classes/p2pPrimaryGeneratorAction.h
  ../classes/p2pRunAction.h
@@ -3185,6 +3226,7 @@ CMakeFiles/p2p.dir/p2p.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4H2ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4H3ToolsManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HepRep.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HepRepFile.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4HepRepFileXMLWriter.hh
@@ -3312,6 +3354,8 @@ CMakeFiles/p2p.dir/p2p.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerFactory.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4Scene.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4Scene.icc

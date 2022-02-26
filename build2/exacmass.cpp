@@ -1,5 +1,6 @@
 #include <TTree.h>
 #include <TFile.h>
+#include <TCanvas.h>
 #include <TTreeReader.h>
 #include <TTreeReaderValue.h>
 #include <TVector3.h>
@@ -14,7 +15,10 @@ double momentum(double energy, const double mass){
 
 void exacmass(){
 
-	TH1F* exacHist = new TH1F("exacHist","Exact Missing Mass",1000,-100,100);
+	TH1F* exacHist = new TH1F("exacHist","Exact Missing Mass",1000,-1200,-1400);
+
+	exacHist->GetXaxis()->SetTitle("Missing Mass (eV/c^2)");
+	exacHist->GetYaxis()->SetTitle("Frequency");
 
 	TFile quasi("quasi.root");
 
@@ -82,5 +86,9 @@ void exacmass(){
 	}
 	TCanvas* cv = new TCanvas();
 	exacHist->Draw();
+	exacHist->Write();
+
+	cv->SaveAs("figs/ExactMass.root");
+	cv->Print("figs/ExactMass.eps");
 
 }

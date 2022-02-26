@@ -18,6 +18,7 @@ public:
 
 	void AddEdep1(G4double edep){Edep1 += edep;};
 	void AddEdep2(G4double edep){Edep2 += edep;};
+
 private:
 	G4double Edep1,Edep2;
 };

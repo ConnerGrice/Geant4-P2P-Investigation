@@ -60,6 +60,12 @@ G4ParticleGun.hh
 p2pRunAction.h
 ../classes/p2pRunAction.h
 
+../classes/p2pHit.h
+G4VHit.hh
+-
+G4THitsCollection.hh
+-
+
 ../classes/p2pPhysicsList.h
 G4VUserPhysicsList.hh
 -
@@ -121,6 +127,16 @@ G4RunManager.hh
 -
 G4SystemOfUnits.hh
 -
+G4Step.hh
+-
+G4HCofThisEvent.hh
+-
+G4SDManager.hh
+-
+G4THitsCollection.hh
+-
+p2pHit.h
+../classes/p2pHit.h
 
 ../classes/p2pSteppingAction.h
 G4UserSteppingAction.hh
@@ -145,6 +161,10 @@ p2pEventAction.h
 /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
 p2pSteppingAction.h
 /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.h
+
+/home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.cpp
+p2pDetectorConstruction.h
+/home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
 
 /home/local1/eclipse-workspace/p2p/classes/p2pDetectorConstruction.h
 G4VUserDetectorConstruction.hh
@@ -176,10 +196,6 @@ G4PVReplica.hh
 p2pSensitiveDetector.h
 /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
-/home/local1/eclipse-workspace/p2p/classes/p2pEventAction.cpp
-p2pEventAction.h
-/home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
-
 /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
 G4EventManager.hh
 -
@@ -191,6 +207,12 @@ G4ParticleGun.hh
 -
 p2pRunAction.h
 /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
+
+/home/local1/eclipse-workspace/p2p/classes/p2pHit.h
+G4VHit.hh
+-
+G4THitsCollection.hh
+-
 
 /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h
 G4VUserPrimaryGeneratorAction.hh
@@ -212,10 +234,6 @@ g4root.hh
 G4RootAnalysisReader.hh
 -
 
-/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.cpp
-p2pRunAction.h
-/home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
-
 /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
 G4UserRunAction.hh
 -
@@ -228,6 +246,10 @@ G4RunManager.hh
 G4Run.hh
 -
 
+/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.cpp
+p2pSensitiveDetector.h
+/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
+
 /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 G4VSensitiveDetector.hh
 -
@@ -237,6 +259,16 @@ G4RunManager.hh
 -
 G4SystemOfUnits.hh
 -
+G4Step.hh
+-
+G4HCofThisEvent.hh
+-
+G4SDManager.hh
+-
+G4THitsCollection.hh
+-
+p2pHit.h
+/home/local1/eclipse-workspace/p2p/classes/p2pHit.h
 
 /home/local1/eclipse-workspace/p2p/classes/p2pSteppingAction.cpp
 p2pSteppingAction.h
@@ -1444,6 +1476,12 @@ G4VHitsCollection.hh
 vector
 -
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+vector
+-
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4HepRep.hh
 G4VGraphicsSystem.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4VGraphicsSystem.hh
@@ -2607,6 +2645,26 @@ G4EventManager.hh
 /usr/local/geant4.10.07.p02/include/Geant4/G4EventManager.hh
 globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+G4SDStructure.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
+G4HCtable.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh
+G4VSDFilter.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh
+vector
+-
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh
+globals.hh
+/usr/local/geant4.10.07.p02/include/Geant4/globals.hh
+G4VSensitiveDetector.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4VSensitiveDetector.hh
+vector
+-
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4SandiaTable.hh
 G4OrderedTable.hh

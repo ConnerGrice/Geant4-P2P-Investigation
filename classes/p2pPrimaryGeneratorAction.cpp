@@ -21,7 +21,7 @@ void p2pPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 
 	//Read an individual row of the "Particles" tree in the "quasi.root" file
 	G4int ntupleID = reader->GetNtuple("Particles","quasi.root");
-	G4cout<<"ID: "<<ntupleID<<G4endl;
+	//G4cout<<"ID: "<<ntupleID<<G4endl;
 
 	G4double x,y,z,px1,py1,pz1,px2,py2,pz2;
 
@@ -39,9 +39,11 @@ void p2pPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	//Get values
 	reader->GetNtupleRow();
 
+	/*
 	G4cout<<"Origin: ("<<x<<","<<y<<","<<z<<")"<<G4endl;
 	G4cout<<"P1 Mom: ("<<px1<<","<<py1<<","<<pz1<<")"<<G4endl;
 	G4cout<<"P2 Mom: ("<<px2<<","<<py2<<","<<pz2<<")"<<G4endl;
+	*/
 
 	//Set reaction origin point
 	fParticleGun->SetParticlePosition(G4ThreeVector(x,y,z));

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/p2p.dir/classes/p2pActionInitialization.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o"
+  "CMakeFiles/p2p.dir/classes/p2pHit.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pPhysicsList.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pPrimaryGeneratorAction.cpp.o"
   "CMakeFiles/p2p.dir/classes/p2pRunAction.cpp.o"

@@ -4,7 +4,7 @@ p2pRunAction::p2pRunAction() : G4UserRunAction() {
 	//Creates the tree at when the run action is constructed
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	manager->SetNtupleMerging(true);
-	manager->SetVerboseLevel(1);
+	//manager->SetVerboseLevel(1);
 
 	manager->SetFileName("data.root");
 
@@ -14,6 +14,7 @@ p2pRunAction::p2pRunAction() : G4UserRunAction() {
 	manager->CreateNtupleDColumn("X");
 	manager->CreateNtupleDColumn("Y");
 	manager->CreateNtupleDColumn("Z");
+	manager->CreateNtupleIColumn("Event");
 	manager->FinishNtuple(0);
 
 	//Data for particles entering outer detector
@@ -22,6 +23,7 @@ p2pRunAction::p2pRunAction() : G4UserRunAction() {
 	manager->CreateNtupleDColumn("X");
 	manager->CreateNtupleDColumn("Y");
 	manager->CreateNtupleDColumn("Z");
+	manager->CreateNtupleIColumn("Event");
 	manager->FinishNtuple(1);
 
 	//Data for the energy deposition into the calorimeter by each outgoing proton
