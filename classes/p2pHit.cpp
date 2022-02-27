@@ -6,6 +6,7 @@ p2pHit::p2pHit(){
 	fTrack = 0;
 	fEvent = 0;
 	fCopy = 0;
+	fPos = G4ThreeVector(9999,9999,9999);
 }
 
 p2pHit::~p2pHit() {

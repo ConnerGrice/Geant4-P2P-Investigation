@@ -70,36 +70,10 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		break;
 	}
 
-	//MAY BE USEFUL FOR DEBUGGING
-	/*
-	//Gets event number
-	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-
-	G4ThreeVector mom = preStepPoint->GetMomentum();
-	G4double momMag = mom.mag();
-
-	G4ThreeVector detDir = detPos.unit();
-	G4ThreeVector momCal = momMag*detDir;
-
-
-	//positions in mm
-	G4cout<<"Hit: 		"<<copyNo<<G4endl;
-	G4cout<<"Psi: 		"<<delta<<G4endl;
-	G4cout<<"Exact: 	"<<prePos<<G4endl;
-	G4cout<<"Calculated:"<<detPos<<G4endl;
-
-	G4cout<<"Track: "<<trackID <<G4endl;
-	G4cout<<"Momentum: "<<momMag<<G4endl;
-	G4cout<<"Direction: "<<detDir<<G4endl;
-	G4cout<<"Mom Dir: "<<momCal<<G4endl;
-	G4cout<<"Mom Exa: "<<mom<<G4endl;
-
-	*/
 	//Gets event number
 	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 
 	//Records the coordinates of the detector segment hit
-	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	if (trackID == 1 || trackID == 2){
 		G4cout<<"Event: "<<event<<", Detector: "<<copyNo<<", Particle: "<<trackID<<G4endl;
 		p2pHit* newHit = new p2pHit();
@@ -113,7 +87,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		//newHit->Print();
 		fHitsCollection->insert(newHit);
 
-
+		G4AnalysisManager* manager = G4AnalysisManager::Instance();
 		//copyNo = 0 (Inner), copyNo = 1 (Outer)
 		manager->FillNtupleIColumn(copyNo,0,trackID);
 		manager->FillNtupleDColumn(copyNo,1,detPos[0]);
@@ -121,6 +95,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		manager->FillNtupleDColumn(copyNo,3,detPos[2]);
 		manager->FillNtupleIColumn(copyNo,4,event);
 		manager->AddNtupleRow(copyNo);
+
 	}
 	return true;
 }
@@ -129,16 +104,41 @@ void p2pSensitiveDetector::EndOfEvent(G4HCofThisEvent*){
 
 	G4int nHits = fHitsCollection->entries();
 	p2pHit* hit = new p2pHit();
+
 	G4int p1Tot = 0;
 	G4int p2Tot = 0;
 
+	G4cout<<"Detector: "<<SensitiveDetectorName<<G4endl;
+
+	p2pHit* missHit = new p2pHit();
+
+	//If missed, add *empty* hit
+	if (nHits < 2){
+		G4cout<<"MISSED!"<<G4endl;
+		fHitsCollection->insert(missHit);
+
+		nHits = fHitsCollection->entries();
+	}
+
+	//If too many hits, ignore extra hits
+	if (nHits >2){
+		G4cout<<"TOO MANY HITS!"<<G4endl;
+		nHits = 2;
+	}
+
+	//Record the data
 	for (G4int i=0;i<nHits;i++){
 		hit = (*fHitsCollection)[i];
 		p1Tot += hit->Getp1();
 		p2Tot += hit->Getp2();
-		G4cout<<"HIT COLLECTION"<<G4endl;
-		G4cout<<"Event: "<<hit->GetEvent()<<", Detector: "<<hit->GetCopy()<<", Particle: "<<hit->GetTrack()<<G4endl;
+		G4int copyNo = hit->GetCopy();
+		G4int ID = hit->GetTrack();
+		G4ThreeVector pos = hit->GetPos();
+		G4int eventID = hit->GetEvent();
+		G4cout<<"Event: "<<eventID<<", Particle: "<<ID<<", Copy: "<<copyNo<<G4endl;
+
+
 	}
-	G4cout<<"Detector: "<<SensitiveDetectorName<<G4endl;
+
 	G4cout<<"particle 1: "<<p1Tot<<", Particle 2: "<<p2Tot<<G4endl;
 }
