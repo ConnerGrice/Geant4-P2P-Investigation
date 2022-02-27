@@ -45,6 +45,8 @@ G4RotationMatrix.hh
 -
 G4PVReplica.hh
 -
+G4SDManager.hh
+-
 p2pSensitiveDetector.h
 ../classes/p2pSensitiveDetector.h
 
@@ -64,6 +66,8 @@ p2pRunAction.h
 G4VHit.hh
 -
 G4THitsCollection.hh
+-
+G4ThreeVector.hh
 -
 
 ../classes/p2pPhysicsList.h
@@ -193,6 +197,8 @@ G4RotationMatrix.hh
 -
 G4PVReplica.hh
 -
+G4SDManager.hh
+-
 p2pSensitiveDetector.h
 /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
@@ -208,10 +214,16 @@ G4ParticleGun.hh
 p2pRunAction.h
 /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
 
+/home/local1/eclipse-workspace/p2p/classes/p2pHit.cpp
+p2pHit.h
+/home/local1/eclipse-workspace/p2p/classes/p2pHit.h
+
 /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
 G4VHit.hh
 -
 G4THitsCollection.hh
+-
+G4ThreeVector.hh
 -
 
 /home/local1/eclipse-workspace/p2p/classes/p2pPrimaryGeneratorAction.h

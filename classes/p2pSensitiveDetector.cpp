@@ -1,8 +1,9 @@
 #include "p2pSensitiveDetector.h"
 
-p2pSensitiveDetector::p2pSensitiveDetector(G4String name) : G4VSensitiveDetector(name){
+p2pSensitiveDetector::p2pSensitiveDetector(G4String name,G4String collection) : G4VSensitiveDetector(name),
+fHitsCollection(0){
 
-	collectionName.insert("FlagTracker");
+	collectionName.insert(collection);
 }
 
 p2pSensitiveDetector::~p2pSensitiveDetector() {
@@ -10,10 +11,11 @@ p2pSensitiveDetector::~p2pSensitiveDetector() {
 
 void p2pSensitiveDetector::Initialize(G4HCofThisEvent* hce){
 
+	G4cout<<"Detector "<<SensitiveDetectorName<<" initialised"<<G4endl;
+
 	fHitsCollection = new p2pHitsCollection(SensitiveDetectorName,collectionName[0]);
 
-	G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(collectionName[0]);
-
+	G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(fHitsCollection);
 	hce->AddHitsCollection(hcID,fHitsCollection);
 
 }
@@ -94,29 +96,24 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 
 	*/
 	//Gets event number
-
 	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
-
-	//G4cout<<"Event: "<<event<<",Detector: "<<copyNo<<","<<"Particle: "<<trackID<<G4endl;
-
-	auto newHit = new p2pHit();
-
-
-	if (copyNo == 0){newHit->InnHit();}
-	if (copyNo == 1){newHit->OutHit();}
-	//newHit->Print();
-
-
-	fHitsCollection->insert(newHit);
-
-	//G4cout<<"Number of Hits: "<<fHitsCollection->entries()<<G4endl;
-	//G4cout<<"Inner: "<<newHit->GetInnFlag()<<G4endl;
-	//G4cout<<"Outer: "<<newHit->GetOutFlag()<<G4endl;
-
 
 	//Records the coordinates of the detector segment hit
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();
 	if (trackID == 1 || trackID == 2){
+		G4cout<<"Event: "<<event<<", Detector: "<<copyNo<<", Particle: "<<trackID<<G4endl;
+		p2pHit* newHit = new p2pHit();
+
+		newHit->SetCopy(copyNo);
+		newHit->SetTrack(trackID);
+		newHit->SetPos(detPos);
+		newHit->SetEvent(event);
+		newHit->Hit(trackID);
+
+		//newHit->Print();
+		fHitsCollection->insert(newHit);
+
+
 		//copyNo = 0 (Inner), copyNo = 1 (Outer)
 		manager->FillNtupleIColumn(copyNo,0,trackID);
 		manager->FillNtupleDColumn(copyNo,1,detPos[0]);
@@ -128,6 +125,20 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	return true;
 }
 
-void p2pSensitiveDetector::EndOfEvent(G4HCofThisEvent* hce){
-	G4cout<<"TEST"<<G4endl;
+void p2pSensitiveDetector::EndOfEvent(G4HCofThisEvent*){
+
+	G4int nHits = fHitsCollection->entries();
+	p2pHit* hit = new p2pHit();
+	G4int p1Tot = 0;
+	G4int p2Tot = 0;
+
+	for (G4int i=0;i<nHits;i++){
+		hit = (*fHitsCollection)[i];
+		p1Tot += hit->Getp1();
+		p2Tot += hit->Getp2();
+		G4cout<<"HIT COLLECTION"<<G4endl;
+		G4cout<<"Event: "<<hit->GetEvent()<<", Detector: "<<hit->GetCopy()<<", Particle: "<<hit->GetTrack()<<G4endl;
+	}
+	G4cout<<"Detector: "<<SensitiveDetectorName<<G4endl;
+	G4cout<<"particle 1: "<<p1Tot<<", Particle 2: "<<p2Tot<<G4endl;
 }

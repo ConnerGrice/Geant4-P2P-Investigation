@@ -1413,6 +1413,9 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/inc
 
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: ../classes/p2pHit.cpp
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: ../classes/p2pHit.h
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/ThreeVector.h
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/ThreeVector.icc
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Vector/defs.h
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Allocator.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4AllocatorPool.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4EnvironmentUtils.hh
@@ -1422,6 +1425,7 @@ CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Gea
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4String.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4String.icc
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
+CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4Types.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VExceptionHandler.hh
 CMakeFiles/p2p.dir/classes/p2pHit.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh

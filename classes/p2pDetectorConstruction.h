@@ -14,6 +14,7 @@
 #include <G4Tubs.hh>
 #include <G4RotationMatrix.hh>
 #include <G4PVReplica.hh>
+#include <G4SDManager.hh>
 
 #include "p2pSensitiveDetector.h"
 
@@ -24,8 +25,8 @@ public:
 	virtual G4VPhysicalVolume* Construct();
 	G4LogicalVolume* GetScoringVolume() const {return fScoringVolume;};
 private:
-	G4LogicalVolume* logicInn;
-	G4LogicalVolume* logicOut;
+	//G4LogicalVolume* logicInn;
+	//G4LogicalVolume* logicOut;
 	G4LogicalVolume* fScoringVolume;
 	virtual void ConstructSDandField();
 };

@@ -1,8 +1,7 @@
 #include "p2pDetectorConstruction.h"
 
 p2pDetectorConstruction::p2pDetectorConstruction() : G4VUserDetectorConstruction(),
-logicInn(0),logicOut(0),fScoringVolume(0){
-
+fScoringVolume(0){
 }
 
 p2pDetectorConstruction::~p2pDetectorConstruction() {
@@ -57,7 +56,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	//Inner cylinder
 	G4Tubs* solidInn = new G4Tubs("Inner",innMin,innMax,innHHight,innStart,innEnd);
-	logicInn = new G4LogicalVolume(solidInn,detectorMat,"Inner");
+	G4LogicalVolume* logicInn = new G4LogicalVolume(solidInn,detectorMat,"Inner");
 
 	//Outer cylinder dimensions
 	G4double outMin = innMin + gap;
@@ -65,7 +64,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	//Outer cylinder
 	G4Tubs* solidOut = new G4Tubs("Outer",outMin,outMax,innHHight,innStart,innEnd);
-	logicOut = new G4LogicalVolume(solidOut,detectorMat,"Outer");
+	G4LogicalVolume* logicOut = new G4LogicalVolume(solidOut,detectorMat,"Outer");
 
 	G4ThreeVector trans;	//Segment translation
 	G4RotationMatrix* rot;	//Segment rotation
@@ -90,7 +89,20 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 void p2pDetectorConstruction::ConstructSDandField(){
 	//Defining which parts of the geometry will become the sensitive detectors
-	logicInn->SetSensitiveDetector(new p2pSensitiveDetector("InnerSens"));
-	logicOut->SetSensitiveDetector(new p2pSensitiveDetector("OuterSens"));
+
+	//HOW I ORIGINALLY SET THE SENSITIVE DETECTORS
+	//logicInn->SetSensitiveDetector(new p2pSensitiveDetector("InnerSens","InnerCollection"));
+	//logicOut->SetSensitiveDetector(new p2pSensitiveDetector("OuterSens","OuterCollection"));
+
+	//NEW WAY, USING SENSITIVE DETECTOR MANAGER
+	auto innSD = new p2pSensitiveDetector("InnerSens","InnerCollection");
+	G4SDManager::GetSDMpointer()->AddNewDetector(innSD);
+	SetSensitiveDetector("Inner",innSD);
+
+	auto outSD = new p2pSensitiveDetector("OuterSens","OuterCollection");
+	G4SDManager::GetSDMpointer()->AddNewDetector(outSD);
+	SetSensitiveDetector("Outer",outSD);
+
+
 }
 

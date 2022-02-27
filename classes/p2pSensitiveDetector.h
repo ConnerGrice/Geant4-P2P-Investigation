@@ -15,7 +15,7 @@
 
 class p2pSensitiveDetector: public G4VSensitiveDetector {
 public:
-	p2pSensitiveDetector(G4String);
+	p2pSensitiveDetector(G4String,G4String);
 	virtual ~p2pSensitiveDetector();
 
 	virtual void Initialize(G4HCofThisEvent*);
@@ -23,7 +23,7 @@ public:
 	virtual void EndOfEvent(G4HCofThisEvent*);
 
 private:
-	p2pHitsCollection* fHitsCollection = new p2pHitsCollection();
+	p2pHitsCollection* fHitsCollection = nullptr;
 
 };
 

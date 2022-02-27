@@ -1,20 +1,25 @@
 #include "p2pHit.h"
 
 p2pHit::p2pHit(){
-	innFlag = 0;
-	outFlag = 0;
+	p1 = 0;
+	p2 = 0;
+	fTrack = 0;
+	fEvent = 0;
+	fCopy = 0;
 }
 
 p2pHit::~p2pHit() {
 }
 
-p2pHit::p2pHit(const p2pHit& right):G4VHit(){
-	innFlag = right.innFlag;
-	outFlag = right.outFlag;
+//Counts how many times each particle hit sensitive detector
+void p2pHit::Hit(G4int particle){
+	if (particle == 1){p1 += 1;}
+	if (particle == 2){p2 += 1;}
 }
 
 void p2pHit::Print(){
-	G4cout<<"Inn Flag: "<<innFlag<<G4endl;
-	G4cout<<"Out Flag: "<<outFlag<<G4endl;
+	G4cout<<"Particle 1 hit: "<<p1<<G4endl;
+	G4cout<<"Particle 2 hit: "<<p2<<G4endl;
+
 }
 
