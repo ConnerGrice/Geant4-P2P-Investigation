@@ -72,6 +72,22 @@ build2/exacmass.o: ../build2/exacmass.cpp \
  /usr/local/root/6.18.04/include/Rtypes.h \
  /usr/local/root/6.18.04/include/ROOT/TRWSpinLock.hxx \
  /usr/local/root/6.18.04/include/ROOT/TSpinMutex.hxx \
+ /usr/local/root/6.18.04/include/TCanvas.h \
+ /usr/local/root/6.18.04/include/TPad.h \
+ /usr/local/root/6.18.04/include/TVirtualPad.h \
+ /usr/local/root/6.18.04/include/TAttPad.h \
+ /usr/local/root/6.18.04/include/TVirtualX.h \
+ /usr/local/root/6.18.04/include/TAttText.h \
+ /usr/local/root/6.18.04/include/GuiTypes.h \
+ /usr/local/root/6.18.04/include/Buttons.h \
+ /usr/local/root/6.18.04/include/TQObject.h \
+ /usr/local/root/6.18.04/include/TVirtualQConnection.h \
+ /usr/local/root/6.18.04/include/TInterpreter.h \
+ /usr/local/root/6.18.04/include/TInterpreterValue.h \
+ /usr/local/root/6.18.04/include/TAttBBox2D.h \
+ /usr/local/root/6.18.04/include/TPoint.h \
+ /usr/local/root/6.18.04/include/TAttCanvas.h \
+ /usr/local/root/6.18.04/include/TCanvasImp.h \
  /usr/local/root/6.18.04/include/TTreeReader.h \
  /usr/local/root/6.18.04/include/TTree.h \
  /usr/local/root/6.18.04/include/TTreeReaderUtils.h \
@@ -120,8 +136,6 @@ build2/exacmass.o: ../build2/exacmass.cpp \
  /usr/local/root/6.18.04/include/TF1.h \
  /usr/local/root/6.18.04/include/TFormula.h \
  /usr/local/root/6.18.04/include/TMethodCall.h \
- /usr/local/root/6.18.04/include/TInterpreter.h \
- /usr/local/root/6.18.04/include/TInterpreterValue.h \
  /usr/local/root/6.18.04/include/Math/Types.h \
  /usr/local/root/6.18.04/include/TROOT.h \
  /usr/local/root/6.18.04/include/TF1AbsComposition.h \
@@ -274,6 +288,38 @@ build2/exacmass.o: ../build2/exacmass.cpp \
 
 /usr/local/root/6.18.04/include/ROOT/TSpinMutex.hxx:
 
+/usr/local/root/6.18.04/include/TCanvas.h:
+
+/usr/local/root/6.18.04/include/TPad.h:
+
+/usr/local/root/6.18.04/include/TVirtualPad.h:
+
+/usr/local/root/6.18.04/include/TAttPad.h:
+
+/usr/local/root/6.18.04/include/TVirtualX.h:
+
+/usr/local/root/6.18.04/include/TAttText.h:
+
+/usr/local/root/6.18.04/include/GuiTypes.h:
+
+/usr/local/root/6.18.04/include/Buttons.h:
+
+/usr/local/root/6.18.04/include/TQObject.h:
+
+/usr/local/root/6.18.04/include/TVirtualQConnection.h:
+
+/usr/local/root/6.18.04/include/TInterpreter.h:
+
+/usr/local/root/6.18.04/include/TInterpreterValue.h:
+
+/usr/local/root/6.18.04/include/TAttBBox2D.h:
+
+/usr/local/root/6.18.04/include/TPoint.h:
+
+/usr/local/root/6.18.04/include/TAttCanvas.h:
+
+/usr/local/root/6.18.04/include/TCanvasImp.h:
+
 /usr/local/root/6.18.04/include/TTreeReader.h:
 
 /usr/local/root/6.18.04/include/TTree.h:
@@ -369,10 +415,6 @@ build2/exacmass.o: ../build2/exacmass.cpp \
 /usr/local/root/6.18.04/include/TFormula.h:
 
 /usr/local/root/6.18.04/include/TMethodCall.h:
-
-/usr/local/root/6.18.04/include/TInterpreter.h:
-
-/usr/local/root/6.18.04/include/TInterpreterValue.h:
 
 /usr/local/root/6.18.04/include/Math/Types.h:
 

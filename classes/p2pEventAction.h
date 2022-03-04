@@ -6,6 +6,7 @@
 #include <g4root.hh>
 #include <G4ParticleGun.hh>
 
+#include "p2pHit.h"
 #include "p2pRunAction.h"
 
 class p2pEventAction: public G4UserEventAction {

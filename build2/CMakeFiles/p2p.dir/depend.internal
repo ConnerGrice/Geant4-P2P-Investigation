@@ -977,6 +977,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
  /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.cpp
  /home/local1/eclipse-workspace/p2p/classes/p2pEventAction.h
+ /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
  /home/local1/eclipse-workspace/p2p/classes/p2pRunAction.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
  /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/Normal3D.h
@@ -1218,6 +1219,7 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
  /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -1268,6 +1270,7 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o
  /usr/local/geant4.10.07.p02/include/Geant4/G4VH1Manager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VH2Manager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VH3Manager.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VNtupleFileManager.hh
  /usr/local/geant4.10.07.p02/include/Geant4/G4VNtupleManager.hh

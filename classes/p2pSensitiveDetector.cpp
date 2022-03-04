@@ -11,7 +11,7 @@ p2pSensitiveDetector::~p2pSensitiveDetector() {
 
 void p2pSensitiveDetector::Initialize(G4HCofThisEvent* hce){
 
-	G4cout<<"Detector "<<SensitiveDetectorName<<" initialised"<<G4endl;
+	//G4cout<<"Detector "<<SensitiveDetectorName<<" initialised"<<G4endl;
 
 	fHitsCollection = new p2pHitsCollection(SensitiveDetectorName,collectionName[0]);
 
@@ -75,7 +75,7 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 
 	//Records the coordinates of the detector segment hit
 	if (trackID == 1 || trackID == 2){
-		G4cout<<"Event: "<<event<<", Detector: "<<copyNo<<", Particle: "<<trackID<<G4endl;
+		//G4cout<<"Event: "<<event<<", Detector: "<<copyNo<<", Particle: "<<trackID<<G4endl;
 		p2pHit* newHit = new p2pHit();
 
 		newHit->SetCopy(copyNo);
@@ -84,61 +84,136 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 		newHit->SetEvent(event);
 		newHit->Hit(trackID);
 
-		//newHit->Print();
 		fHitsCollection->insert(newHit);
-
-		G4AnalysisManager* manager = G4AnalysisManager::Instance();
-		//copyNo = 0 (Inner), copyNo = 1 (Outer)
-		manager->FillNtupleIColumn(copyNo,0,trackID);
-		manager->FillNtupleDColumn(copyNo,1,detPos[0]);
-		manager->FillNtupleDColumn(copyNo,2,detPos[1]);
-		manager->FillNtupleDColumn(copyNo,3,detPos[2]);
-		manager->FillNtupleIColumn(copyNo,4,event);
-		manager->AddNtupleRow(copyNo);
-
 	}
 	return true;
 }
 
 void p2pSensitiveDetector::EndOfEvent(G4HCofThisEvent*){
 
+	//Number of hits in this event
 	G4int nHits = fHitsCollection->entries();
-	p2pHit* hit = new p2pHit();
 
-	G4int p1Tot = 0;
-	G4int p2Tot = 0;
+	//Event number
+	G4int event = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+	//Detector copy number
+	G4int hcID = G4SDManager::GetSDMpointer()->GetCollectionID(fHitsCollection);
 
 	G4cout<<"Detector: "<<SensitiveDetectorName<<G4endl;
+	G4cout<<"Event: "<<event<<G4endl;
 
-	p2pHit* missHit = new p2pHit();
+	//Hit counter for each particle
+	std::vector<G4int> tot = {0,0};
 
-	//If missed, add *empty* hit
-	if (nHits < 2){
-		G4cout<<"MISSED!"<<G4endl;
-		fHitsCollection->insert(missHit);
+	//Empty hit container
+	p2pHit* hit = new p2pHit();
 
-		nHits = fHitsCollection->entries();
-	}
-
-	//If too many hits, ignore extra hits
-	if (nHits >2){
-		G4cout<<"TOO MANY HITS!"<<G4endl;
-		nHits = 2;
-	}
-
-	//Record the data
+	//Counting number of times each particle hit detector
 	for (G4int i=0;i<nHits;i++){
 		hit = (*fHitsCollection)[i];
-		p1Tot += hit->Getp1();
-		p2Tot += hit->Getp2();
-		G4int copyNo = hit->GetCopy();
-		G4int ID = hit->GetTrack();
-		G4ThreeVector pos = hit->GetPos();
-		G4int eventID = hit->GetEvent();
-		G4cout<<"Event: "<<eventID<<", Particle: "<<ID<<", Copy: "<<copyNo<<G4endl;
-
-
+		tot[0] += hit->Getp1(); //Particle 1
+		tot[1] += hit->Getp2();	//Particle 2
 	}
 
-	G4cout<<"particle 1: "<<p1Tot<<", Particle 2: "<<p2Tot<<G4endl;
+	G4cout<<"particle 1: "<<tot[0]<<", Particle 2: "<<tot[1]<<G4endl;
+
+	//Empty hit containers for when particles miss detector
+	p2pHit* missHit1 = new p2pHit();
+	missHit1->SetEvent(event);
+	missHit1->SetCopy(hcID);
+	p2pHit* missHit2 = new p2pHit();
+	missHit2->SetEvent(event);
+	missHit2->SetCopy(hcID);
+	std::vector<p2pHit*> missHit = {missHit1,missHit2};
+
+	//Checks if either particle missed any of the detectors
+	for (G4int i=0;i<2;i++){
+		if (tot[i] == 0){
+			//Adds missed hit container
+			fHitsCollection->insert(missHit[i]);
+		}
+	}
+
+	//Tracker for recording data
+	G4int nump1 = 0;
+	G4int nump2 = 0;
+
+	//Particle ID
+	G4int particle;
+
+	//Number of recorded hits per event
+	G4int recorded = 0;
+
+	//UPdates number of hits after adding missed hit containers
+	nHits = fHitsCollection->entries();
+
+	//For recording data
+	G4AnalysisManager* manager = G4AnalysisManager::Instance();
+
+	//Loops through each hit in collections
+	for (G4int i=0;i<nHits;i++){
+
+		//Getting hit data individual hit
+		hit = (*fHitsCollection)[i];
+		particle = hit->GetTrack();
+		G4ThreeVector detPos = hit->GetPos();
+		G4int copyNo = hit->GetCopy();
+
+		/*
+		 * Only records the data for each particle for their initial
+		 * hit to the detector (In case the particle hits the detector
+		 * multiple times)
+		 */
+
+		//Checks if particle 1
+		if (particle == 1){
+			//Checks if particle 1 hit has already been recorded
+			if (nump1 == 0){
+				G4cout<<"RECORDED P1"<<G4endl;
+				recorded += 1;
+
+				//copyNo = 0 (Inner), copyNo = 1 (Outer)
+				manager->FillNtupleIColumn(copyNo,0,particle);
+				manager->FillNtupleDColumn(copyNo,1,detPos[0]);
+				manager->FillNtupleDColumn(copyNo,2,detPos[1]);
+				manager->FillNtupleDColumn(copyNo,3,detPos[2]);
+				manager->FillNtupleIColumn(copyNo,4,event);
+				manager->AddNtupleRow(copyNo);
+			}
+			nump1 += 1;
+		}
+		//Checks if particle 2
+		if (particle == 2){
+			//Checks if particle 2 has already been recorded
+			if (nump2 == 0){
+				G4cout<<"RECORDED P2"<<G4endl;
+				recorded += 1;
+
+				//copyNo = 0 (Inner), copyNo = 1 (Outer)
+				manager->FillNtupleIColumn(copyNo,0,particle);
+				manager->FillNtupleDColumn(copyNo,1,detPos[0]);
+				manager->FillNtupleDColumn(copyNo,2,detPos[1]);
+				manager->FillNtupleDColumn(copyNo,3,detPos[2]);
+				manager->FillNtupleIColumn(copyNo,4,event);
+				manager->AddNtupleRow(copyNo);
+			}
+			nump2 += 1;
+		}
+		//Checks if the particle is a missed hit
+		if (particle == -1){
+			G4cout<<"RECORDED MISS"<<G4endl;
+			recorded += 1;
+
+			//copyNo = 0 (Inner), copyNo = 1 (Outer)
+			manager->FillNtupleIColumn(copyNo,0,particle);
+			manager->FillNtupleDColumn(copyNo,1,detPos[0]);
+			manager->FillNtupleDColumn(copyNo,2,detPos[1]);
+			manager->FillNtupleDColumn(copyNo,3,detPos[2]);
+			manager->FillNtupleIColumn(copyNo,4,event);
+			manager->AddNtupleRow(copyNo);
+		}
+	}
+	G4cout<<"RECORDED: "<<recorded<<G4endl;
+
+
 }

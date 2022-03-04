@@ -976,6 +976,7 @@ CMakeFiles/p2p.dir/classes/p2pDetectorConstruction.cpp.o: /usr/local/geant4.10.0
 
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: ../classes/p2pEventAction.cpp
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: ../classes/p2pEventAction.h
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: ../classes/p2pHit.h
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: ../classes/p2pRunAction.h
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/BasicVector3D.h
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/clhep/2.4.4.0/include/CLHEP/Geometry/Normal3D.h
@@ -1217,6 +1218,7 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/inc
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileInformation.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TFileManager.icc
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4THnManager.icc
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4TNtupleDescription.hh
@@ -1267,6 +1269,7 @@ CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/inc
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VH1Manager.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VH2Manager.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VH3Manager.hh
+CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VNtupleFileManager.hh
 CMakeFiles/p2p.dir/classes/p2pEventAction.cpp.o: /usr/local/geant4.10.07.p02/include/Geant4/G4VNtupleManager.hh

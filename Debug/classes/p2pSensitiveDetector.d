@@ -505,7 +505,16 @@ classes/p2pSensitiveDetector.o: ../classes/p2pSensitiveDetector.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserTrackingAction.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4SystemOfUnits.hh
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SystemOfUnits.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4Step.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VSensitiveDetector.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh \
+ ../classes/p2pHit.h /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh
 
 ../classes/p2pSensitiveDetector.h:
 
@@ -1520,3 +1529,23 @@ classes/p2pSensitiveDetector.o: ../classes/p2pSensitiveDetector.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4RunManagerKernel.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4SystemOfUnits.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4Step.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4SDManager.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4SDStructure.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VSensitiveDetector.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh:
+
+../classes/p2pHit.h:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh:

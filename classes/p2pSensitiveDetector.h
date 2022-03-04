@@ -11,6 +11,8 @@
 #include <G4SDManager.hh>
 #include <G4THitsCollection.hh>
 
+#include <vector>
+
 #include "p2pHit.h"
 
 class p2pSensitiveDetector: public G4VSensitiveDetector {

@@ -35,6 +35,8 @@ G4SDManager.hh
 -
 G4THitsCollection.hh
 -
+vector
+-
 p2pHit.h
 /home/local1/eclipse-workspace/p2p/classes/p2pHit.h
 

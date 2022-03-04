@@ -3,10 +3,10 @@
 p2pHit::p2pHit(){
 	p1 = 0;
 	p2 = 0;
-	fTrack = 0;
+	fTrack = -1;
 	fEvent = 0;
 	fCopy = 0;
-	fPos = G4ThreeVector(9999,9999,9999);
+	fPos = G4ThreeVector(0,0,0);
 }
 
 p2pHit::~p2pHit() {

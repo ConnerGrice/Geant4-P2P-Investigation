@@ -10,13 +10,17 @@ p2pEventAction::~p2pEventAction() {
 }
 
 void p2pEventAction::BeginOfEventAction(const G4Event*){
+	G4cout<<"EVENT START"<<G4endl;
 	Edep1 = 0;
 	Edep2 = 0;
 }
 
 void p2pEventAction::EndOfEventAction(const G4Event*){
-	G4cout<<"Energy Deposition 1: "<<Edep1<<G4endl;
-	G4cout<<"Energy Deposition 2: "<<Edep2<<G4endl;
+	G4cout<<"EVENT END"<<G4endl;
+	//G4cout<<"Energy Deposition 1: "<<Edep1<<G4endl;
+	//G4cout<<"Energy Deposition 2: "<<Edep2<<G4endl;
+
+
 
 	//Records final energy deposition by each particle
 	G4AnalysisManager* manager = G4AnalysisManager::Instance();

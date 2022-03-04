@@ -493,6 +493,10 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4ParticleGun.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VPrimaryGenerator.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryVertex.hh \
+ ../classes/p2pHit.h /usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh \
  ../classes/p2pRunAction.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4Threading.hh \
@@ -500,7 +504,6 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/rundefs.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh \
- /usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VDigiCollection.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VUserEventInformation.hh \
@@ -1496,6 +1499,16 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4PrimaryVertex.hh:
 
+../classes/p2pHit.h:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VHit.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4THitsCollection.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4ThreeVector.hh:
+
 ../classes/p2pRunAction.h:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4UserRunAction.hh:
@@ -1509,8 +1522,6 @@ classes/p2pEventAction.o: ../classes/p2pEventAction.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4Event.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh:
-
-/usr/local/geant4.10.07.p02/include/Geant4/G4VHitsCollection.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4DCofThisEvent.hh:
 
