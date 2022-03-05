@@ -17,7 +17,7 @@ void exacmass(){
 
 	TH1F* exacHist = new TH1F("exacHist","Exact Missing Mass",1000,-1200,-1400);
 
-	exacHist->GetXaxis()->SetTitle("Missing Mass (eV/c^2)");
+	exacHist->GetXaxis()->SetTitle("Missing Mass (keV/c^2)");
 	exacHist->GetYaxis()->SetTitle("Frequency");
 
 	TFile quasi("quasi.root");
@@ -42,12 +42,7 @@ void exacmass(){
 	TLorentzVector P2;
 
 	//Outgoing fragment
-	TTreeReaderValue<double> PBx = {reader,"PBx"};
-	TTreeReaderValue<double> PBy = {reader,"PBy"};
-	TTreeReaderValue<double> PBz = {reader,"PBz_lab"};
-	TTreeReaderValue<double> EB = {reader,"EB"};
 	double fragM = MA;
-	TLorentzVector frag;
 
 	//Beam info (C-12)
 	const double beamM = MA;	//Mass
@@ -67,12 +62,9 @@ void exacmass(){
 	TLorentzVector momMiss;	//Missing mass 4-vector
 	double missing;
 
-
-
 	while (reader.Next()){
 		P1 = TLorentzVector(*P1x,*P1y,*P1z,*E1);
 		P2 = TLorentzVector(*P2x,*P2y,*P2z,*E2);
-		frag =TLorentzVector(*PBx,*PBy,*PBz,*EB);
 
 		momOut = P1 + P2;
 		momInit = ltarget + lbeam;
@@ -90,5 +82,6 @@ void exacmass(){
 
 	cv->SaveAs("figs/ExactMass.root");
 	cv->Print("figs/ExactMass.eps");
+	cv->Print("figs/ExactMass.png");
 
 }
