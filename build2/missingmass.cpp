@@ -189,79 +189,16 @@ void missingmass(){
 	std::cout<<"Number of hit events: "<<hitEvent<<std::endl;
 	std::cout<<"Number of events: "<<event<<std::endl;
 
-	/*
-	//Fragment
-	const double fragM = MB;	//Frag mass
-	TVector3 frag;	//Frag 3-vector
-	TLorentzVector lfrag;	//Frag 4-vector
-
-	//Sums
-	TLorentzVector momOut;	//Total output particle momentum (without frag)
-	TLorentzVector momInit;	//Total initial momentum
-	TLorentzVector momMiss;	//Missing mass 4-vector
-
-	//Missing mass
-	double missingMass;	//Missing mass value
-
-
-	//Loops through inner tree
-	while (reader.Next()){
-
-		//Defines fragment momentum and 4-momentum
-		frag = TVector3(*fragX,*fragY,*fragZ);
-		lfrag = TLorentzVector(frag,sqrt(fragM*fragM*frag.Mag2()));
-
-		//Calculates momentum for each particle
-		P1 = momentum(*E1,proM);
-		P2 = momentum(*E2,proM);
-
-		//Adds random smear of values to simulate calorimeter resolution
-		P1Rand = r3.Gaus(P1,P1*FWHW);
-		P2Rand = r3.Gaus(P2,P2*FWHW);
-
-		//Only uses data from the same particle track
-		if(*innID == 1){
-			//Gets displacement t 3-vector
-			disp1.SetXYZ(*outX-*innX,*outY-*innY,*outZ-*innZ);
-
-			//Gets momentum 3-vector
-			mom1 = P1Rand*(disp1.Unit());
-
-			//Gets momentum 4-vector
-			lmom1.SetPxPyPzE(mom1.X(),mom1.Y(),mom1.Z(),*E1);
-		}
-		if(*innID == 2){
-			//Gets displacement 3-vector
-			disp2.SetXYZ(*outX-*innX,*outY-*innY,*outZ-*innZ);
-
-			//Gets momentum 3-vector
-			mom2 = P2Rand*(disp2.Unit());
-
-			//Gets momentum 4-vector
-			lmom2.SetPxPyPzE(mom2.X(),mom2.Y(),mom2.Z(),*E2);
-		}
-		momOut = lmom1+lmom2;
-		momInit = lbeam + ltarget;
-		momMiss = momInit - momOut;
-
-		missingMass = momMiss.M()-fragM;
-
-		std::cout<<*innID<<","<<*outID<<std::endl;
-
-		std::cout<<"Missing Mass: "<<missingMass<<" MeV/c^2"<<std::endl;
-
-		missHist->Fill(missingMass);
-	}
-	*/
-
-
+	//Canvas to be drawn on
 	TCanvas* cv = new TCanvas();
 	missHist->Draw();
 
+	//Saving figure
 	cv->SaveAs("figs/missing.root");
 	cv->Print("figs/missing.eps");
 	cv->Print("figs/missing.png");
 
+	//Close files
 	input.Close();
 	quasi.Close();
 }

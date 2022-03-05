@@ -46,7 +46,6 @@ void energycomp(){
 	TCanvas* cv = new TCanvas("C1","Energy",0,1000,700,500);
 	cv->SetGrid();
 
-
 	//Graph containing particle 1 data
 	TGraph* E1 = new TGraph(n,allCalcE1,allExactE1);
 	E1->SetTitle("Exact Energy vs Calorimeter Energy of Particle 1");
@@ -63,7 +62,6 @@ void energycomp(){
 	int choice;
 	std::cout<<"Comparing particle 1 or 2: ";
 	std::cin>>choice;
-
 
 	//Saves and draws the graph that was chosen
 	switch(choice){
@@ -83,4 +81,6 @@ void energycomp(){
 		std::cout<<"Please input 1 or 2"<<std::endl;
 		break;
 	}
+	quasi.Close();
+	measured.Close();
 }
