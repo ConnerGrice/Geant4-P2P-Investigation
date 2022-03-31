@@ -16,6 +16,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	//Defines some materials
 	G4Material* worldMat = nist->FindOrBuildMaterial("G4_Galactic");
 	G4Material* detectorMat = nist->FindOrBuildMaterial("G4_Si");
+	G4Material* emissionMat = nist->FindOrBuildMaterial("G4_lH2");
 
 	G4bool checkOverlaps = true;
 
@@ -38,6 +39,15 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicCal,"Calorimeter",logicWorld,false,3,checkOverlaps);
 
 	fScoringVolume = logicCal;
+
+	//Emission Surface
+	G4double diameter = 3*cm;
+	G4double length  = 3*cm;
+
+	G4Tubs* solidEmi = new G4Tubs("Emission",0,diameter,length,0,2*M_PI);
+	G4LogicalVolume* logicEmi = new G4LogicalVolume(solidEmi,emissionMat,"Emission");
+	new G4PVPlacement(0,G4ThreeVector(0,0,0),logicEmi,"Emission",logicWorld,false,4,checkOverlaps);
+
 
 
 	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)
