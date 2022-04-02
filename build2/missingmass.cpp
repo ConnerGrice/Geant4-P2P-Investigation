@@ -195,8 +195,8 @@ void missingmass(){
 
 	//Saving figure
 	cv->SaveAs("figs/missing.root");
-	cv->Print("figs/missing.eps");
-	cv->Print("figs/missing.png");
+	//cv->Print("figs/missing.eps");
+	//cv->Print("figs/missing.png");
 
 	//Close files
 	input.Close();

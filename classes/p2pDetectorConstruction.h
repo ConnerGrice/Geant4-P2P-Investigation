@@ -15,6 +15,7 @@
 #include <G4RotationMatrix.hh>
 #include <G4PVReplica.hh>
 #include <G4SDManager.hh>
+#include <G4GenericMessenger.hh>
 
 #include "p2pSensitiveDetector.h"
 
@@ -25,10 +26,19 @@ public:
 	virtual G4VPhysicalVolume* Construct();
 	G4LogicalVolume* GetScoringVolume() const {return fScoringVolume;};
 private:
-	//G4LogicalVolume* logicInn;
-	//G4LogicalVolume* logicOut;
-	G4LogicalVolume* fScoringVolume;
 	virtual void ConstructSDandField();
+	void DefineMaterial();
+
+	G4LogicalVolume* fScoringVolume;
+	G4Box* solidWorld;
+	G4Sphere* solidCal;
+	G4Tubs* solidEmi,*solidInn,*solidOut;
+	G4LogicalVolume *logicWorld,*logicCal,*logicEmi,*logicInn,*logicOut;
+	G4VPhysicalVolume* physicalWorld,*physicalCal,*physicalEmi,*physicalInn,*physicalOut;
+	G4Material *worldMat,*detectorMat,*emissionMat;
+
+	G4GenericMessenger* fMessenger;
+
 };
 
 #endif /* CLASSES_P2PDETECTORCONSTRUCTION_H_ */

@@ -39,6 +39,8 @@ G4PVReplica.hh
 -
 G4SDManager.hh
 -
+G4GenericMessenger.hh
+-
 p2pSensitiveDetector.h
 /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
@@ -49,10 +51,6 @@ G4THitsCollection.hh
 -
 G4ThreeVector.hh
 -
-
-/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.cpp
-p2pSensitiveDetector.h
-/home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 
 /home/local1/eclipse-workspace/p2p/classes/p2pSensitiveDetector.h
 G4VSensitiveDetector.hh
@@ -768,6 +766,24 @@ memory
 globals.hh
 /usr/local/geant4.10.07.p02/include/Geant4/globals.hh
 
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyMethod.hh
+functional
+-
+type_traits
+-
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyType.hh
+algorithm
+-
+typeinfo
+-
+iostream
+-
+sstream
+-
+G4UIcommand.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
+
 /usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4AutoLock.hh
@@ -1097,6 +1113,22 @@ G4GRSVolume.icc
 /usr/local/geant4.10.07.p02/include/Geant4/G4GRSVolume.icc
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4GRSVolume.icc
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4GenericMessenger.hh
+G4UImessenger.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4UImessenger.hh
+G4UIcommand.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4UIcommand.hh
+G4AnyType.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyType.hh
+G4AnyMethod.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyMethod.hh
+G4ApplicationState.hh
+/usr/local/geant4.10.07.p02/include/Geant4/G4ApplicationState.hh
+map
+-
+vector
+-
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4GeomConfig.hh
 
