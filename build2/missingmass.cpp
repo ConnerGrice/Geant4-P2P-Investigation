@@ -192,9 +192,9 @@ void missingmass(){
 	//Canvas to be drawn on
 	TCanvas* cv = new TCanvas();
 	missHist->Draw();
-
+	missHist->SaveAs("figs/missing.root");
 	//Saving figure
-	cv->SaveAs("figs/missing.root");
+	//cv->SaveAs("figs/missing.root");
 	//cv->Print("figs/missing.eps");
 	//cv->Print("figs/missing.png");
 

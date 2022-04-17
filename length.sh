@@ -1,7 +1,7 @@
 #!/bin/bash
 
-suffix=250 
-for value in $(seq 25.0 0.1 35.0);
+suffix=20 
+for value in $(seq 20.0 1.0 50.0);
 do 
 	sed -i 's/G4double len = .*/G4double len = '"$value"'*cm;/g' classes/p2pDetectorConstruction.cpp
 	cd build2
