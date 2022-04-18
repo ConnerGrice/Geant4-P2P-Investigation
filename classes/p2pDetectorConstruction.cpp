@@ -61,8 +61,8 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	G4int numRow = 100;				//Number of rows
 	G4double len = 36*cm;
 	G4double segLen = len/numRow;	//Length of each segment
-	G4double gap = 3*cm;			//Space between tubes (3cm)
-	G4double thick = 1.00*mm;
+	G4double gap = 5.0*cm;
+	G4double thick = 0.01*mm;
 
 	G4double innMin = 5*cm;				//Inner radius of segment (5cm)
 	G4double innMax = innMin + thick;	//Outer radius of segment

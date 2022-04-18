@@ -52,12 +52,21 @@ void energycomp(){
 	E1->GetXaxis()->SetTitle("Calorimeter Energy (keV/c^2)");
 	E1->GetYaxis()->SetTitle("Exact Energy (keV/c^2)");
 
+/*
 	//Graph containing particle 2 data
 	TGraph* E2 = new TGraph(n,allCalcE2,allExactE2);
 	E2->SetTitle("Exact Energy vs Calorimeter Energy of Particle 2");
 	E2->GetXaxis()->SetTitle("Calorimeter Energy (keV/c^2)");
 	E2->GetYaxis()->SetTitle("Exact Energy (keV/c^2)");
+*/
 
+	E1->Draw("ap");
+	cv->SaveAs("figs/energycomp1.root");
+	//E1->Print("figs/energycomp1.eps");
+	//cv->Print("figs/energycomp1.png");
+
+
+/*
 	//Choice which particle to look at
 	int choice;
 	std::cout<<"Comparing particle 1 or 2: ";
@@ -81,6 +90,7 @@ void energycomp(){
 		std::cout<<"Please input 1 or 2"<<std::endl;
 		break;
 	}
+*/
 	quasi.Close();
 	measured.Close();
 }
