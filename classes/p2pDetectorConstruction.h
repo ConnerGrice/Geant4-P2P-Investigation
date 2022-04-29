@@ -17,6 +17,7 @@
 #include <G4SDManager.hh>
 #include <G4GenericMessenger.hh>
 
+#include "dimensions.h"
 #include "p2pSensitiveDetector.h"
 
 class p2pDetectorConstruction: public G4VUserDetectorConstruction {

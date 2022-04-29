@@ -3,7 +3,7 @@
 suffix=1 
 for value in $(seq 0.01 0.01 1.0);
 do 
-	sed -i 's/G4double thick = .*/G4double thick = '"$value"'*mm;/g' classes/p2pDetectorConstruction.cpp
+	sed -i 's/const G4double THICKNESS = .*/const G4double THICKNESS = '"$value"'*mm;/g' classes/dimensions.h
 	cd build2
 	make
 	./p2p run.mac

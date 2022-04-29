@@ -1,9 +1,9 @@
 #!/bin/bash
 
-suffix=20 
-for value in $(seq 20.0 1.0 50.0);
+suffix=51 
+for value in $(seq 51.0 1.0 80.0);
 do 
-	sed -i 's/G4double len = .*/G4double len = '"$value"'*cm;/g' classes/p2pDetectorConstruction.cpp
+	sed -i 's/const G4double LENGTH = .*/const G4double LENGTH = '"$value"'*cm;/g' classes/dimensions.h
 	cd build2
 	make
 	./p2p run.mac

@@ -27,16 +27,16 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 	G4bool checkOverlaps = true;
 
 	//World
-	G4double worldx = 100*cm;
-	G4double worldy = 100*cm;
-	G4double worldz = 100*cm;
+	G4double worldx = 500*cm;
+	G4double worldy = 500*cm;
+	G4double worldz = 500*cm;
 
 	solidWorld = new G4Box("World",worldx,worldy,worldz);
 	logicWorld = new G4LogicalVolume(solidWorld,worldMat,"World");
 	physicalWorld = new G4PVPlacement(0,G4ThreeVector(0,0,0),logicWorld,"World",0,false,0,checkOverlaps);
 
 	//Spherical calorimeter
-	G4double calMin = 20*cm;
+	G4double calMin = 80*cm;
 	G4double calThick = 80*cm;
 	G4double calMax = calMin+calThick;
 
@@ -57,14 +57,14 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 
 	//Detector surfaces (CHANGE IN SENSITIVE DETECTOR ASWELL!)
-	G4int numSeg = 100;				//Number of segments
-	G4int numRow = 100;				//Number of rows
-	G4double len = 36*cm;
+	G4int numSeg = SEGMENTS;				//Number of segments
+	G4int numRow = ROWS;				//Number of rows
+	G4double len = LENGTH;
 	G4double segLen = len/numRow;	//Length of each segment
-	G4double gap = 5.0*cm;
-	G4double thick = 0.01*mm;
+	G4double gap = GAP;
+	G4double thick = THICKNESS;
 
-	G4double innMin = 5*cm;				//Inner radius of segment (5cm)
+	G4double innMin = INNERRAD;				//Inner radius of segment (5cm)
 	G4double innMax = innMin + thick;	//Outer radius of segment
 	G4double innHHight = segLen/2;		//half the length of cylinder segment
 	G4double innStart = 0;				//segment starting angle

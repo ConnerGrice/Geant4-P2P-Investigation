@@ -13,6 +13,7 @@
 
 #include <vector>
 
+#include "dimensions.h"
 #include "p2pHit.h"
 
 class p2pSensitiveDetector: public G4VSensitiveDetector {

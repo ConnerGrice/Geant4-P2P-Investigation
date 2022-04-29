@@ -45,10 +45,10 @@ G4bool p2pSensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory*){
 	//Gets actual angle of segment from horizontal
 	G4double theta = (rotDetector->getPsi())*2;
 
-	G4int numSeg = 100;				//Number of segments
-	G4double thick = 0.5*mm;		//Thickness of tubes (0.5mm)
-	G4double innMin = 5*cm;			//Inner inner radius
-	G4double gap = 3*cm;			//Gap between detectors
+	G4int numSeg = SEGMENTS;				//Number of segments
+	G4double thick = THICKNESS;		//Thickness of tubes (0.5mm)
+	G4double innMin = INNERRAD;			//Inner inner radius
+	G4double gap = GAP;			//Gap between detectors
 
 	G4double outMin = innMin + gap;		//Outer inner radius
 	G4double innRad = innMin+(thick/2);	//Inner central radius
