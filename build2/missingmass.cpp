@@ -4,6 +4,7 @@
 #include <TTree.h>
 #include <TFile.h>
 #include <TH1F.h>
+#include <TF1.h>
 #include <TCanvas.h>
 #include <TTreeReader.h>
 #include <TTreeReaderValue.h>
@@ -188,6 +189,7 @@ void missingmass(){
 
 	std::cout<<"Number of hit events: "<<hitEvent<<std::endl;
 	std::cout<<"Number of events: "<<event<<std::endl;
+
 
 	//Canvas to be drawn on
 	TCanvas* cv = new TCanvas();

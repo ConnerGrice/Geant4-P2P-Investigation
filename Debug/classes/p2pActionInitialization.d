@@ -560,7 +560,10 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
  /usr/local/geant4.10.07.p02/include/Geant4/G4CollectionNameVector.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh \
- ../classes/p2pSensitiveDetector.h \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4GenericMessenger.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4AnyType.hh \
+ /usr/local/geant4.10.07.p02/include/Geant4/G4AnyMethod.hh \
+ ../classes/dimensions.h ../classes/p2pSensitiveDetector.h \
  /usr/local/geant4.10.07.p02/include/Geant4/G4VSensitiveDetector.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4Step.hh \
  /usr/local/geant4.10.07.p02/include/Geant4/G4HCofThisEvent.hh
@@ -1688,6 +1691,14 @@ classes/p2pActionInitialization.o: ../classes/p2pActionInitialization.cpp \
 /usr/local/geant4.10.07.p02/include/Geant4/G4VSDFilter.hh:
 
 /usr/local/geant4.10.07.p02/include/Geant4/G4HCtable.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4GenericMessenger.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyType.hh:
+
+/usr/local/geant4.10.07.p02/include/Geant4/G4AnyMethod.hh:
+
+../classes/dimensions.h:
 
 ../classes/p2pSensitiveDetector.h:
 
