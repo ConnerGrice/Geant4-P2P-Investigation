@@ -37,7 +37,7 @@ G4VPhysicalVolume* p2pDetectorConstruction::Construct() {
 
 	//Spherical calorimeter
 	G4double calMin = 80*cm;
-	G4double calThick = 80*cm;
+	G4double calThick = CALTHICKNESS;
 	G4double calMax = calMin+calThick;
 
 	solidCal= new G4Sphere("Calorimeter",calMin,calMax,0,2*M_PI,0,M_PI);

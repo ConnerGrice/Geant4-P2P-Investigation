@@ -1,9 +1,9 @@
 #!/bin/bash
 
-suffix=1 
-for value in $(seq 0.01 0.1 1.0);
+suffix=80 
+for value in $(seq 80 5 200);
 do 
-	sed -i 's/G4double thick = .*/G4double thick = '"$value"'*mm;/g' classes/p2pDetectorConstruction.cpp
+	sed -i 's/const G4double CALTHICKNESS = .*/const G4double CALTHICKNESS = '"$value"'*cm;/g' classes/dimensions.h
 	cd build2
 	make
 	./p2p run.mac
@@ -12,7 +12,7 @@ do
 	cd ..
 	echo $suffix
 	echo $value
-	suffix=$((suffix + 10))
+	((suffix++))
 done
 
 echo ALL done
