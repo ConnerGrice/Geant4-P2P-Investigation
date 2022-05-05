@@ -19,11 +19,13 @@
 /vis/scene/endOfEventAction accumulate
 
 #Adds a scale line to the enviroment
-/vis/scene/add/scale
-/vis/scene/add/axes 0 0 0 1 cm
+#/vis/scene/add/scale
+#/vis/scene/add/axes 0 0 0 1 cm
 
 #Makes the "World" shape invisible
-#/vis/geometry/set/visibility Detector 0 false
+/vis/geometry/set/visibility World 0 false
+#/vis/geometry/set/visibility Calorimeter 0 false
+#/vis/geometry/set/forceSolid Emission 0 true
 
 #Draws detector as smooth surface
 /vis/viewer/set/style wireframe

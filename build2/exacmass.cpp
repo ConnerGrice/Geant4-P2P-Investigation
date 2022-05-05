@@ -76,6 +76,10 @@ void exacmass(){
 		exacHist->Fill(missing);
 
 	}
+
+	TF1 *gfit = new TF1("gfit","gaus");
+	exacHist->Fit("gfit","gaus");
+
 	TCanvas* cv = new TCanvas();
 	exacHist->Draw();
 	exacHist->Write();
