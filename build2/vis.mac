@@ -24,7 +24,7 @@
 
 #Makes the "World" shape invisible
 /vis/geometry/set/visibility World 0 false
-#/vis/geometry/set/visibility Calorimeter 0 false
+/vis/geometry/set/visibility Calorimeter 0 false
 #/vis/geometry/set/forceSolid Emission 0 true
 
 #Draws detector as smooth surface

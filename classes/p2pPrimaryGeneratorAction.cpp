@@ -20,7 +20,7 @@ void p2pPrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	reader->SetVerboseLevel(1);
 
 	//Read an individual row of the "Particles" tree in the "quasi.root" file
-	G4int ntupleID = reader->GetNtuple("Particles","quasi.root");
+	G4int ntupleID = reader->GetNtuple("Particles","../quasi.root");
 	//G4cout<<"ID: "<<ntupleID<<G4endl;
 
 	G4double x,y,z,px1,py1,pz1,px2,py2,pz2;

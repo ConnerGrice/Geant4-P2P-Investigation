@@ -43,15 +43,15 @@ int main(int argc,char** argv)
 	  //fills session object if no arguments are given at command line
 	if (argc == 1){ session = new G4UIExecutive(argc,argv);}
 
-	  //If session is empty, run in batch mode
+	  //If macro given, run with that macro
 	if (! session){
-		G4String command = "/control/execute ";
+		G4String command = "/control/execute ../";
 		G4String macro = argv[1];
 		UI->ApplyCommand(command+macro);
 	}
 	  //else, run init_vis macro and start the visualizer
 	else{
-		UI->ApplyCommand("/control/execute init_vis.mac");
+		UI->ApplyCommand("/control/execute ../init_vis.mac");
 		session->SessionStart();
 		delete session;
 	}

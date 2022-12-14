@@ -28,9 +28,11 @@ void energycomp(){
 	TTreeReaderValue<Double_t> calcE1 = {reader,"Protons.E1"};
 	TTreeReaderValue<Double_t> calcE2 = {reader,"Protons.E2"};
 
+	//Number of particle experiments
+	Int_t n = 100240;
 
-	Int_t n = 100240; //Number of data points
-	Double_t allCalcE1[n],allCalcE2[n],allExactE1[n],allExactE2[n]; //arrays to be filled
+	//Arrays to be filled (Energy for both particles)
+	Double_t allCalcE1[n],allCalcE2[n],allExactE1[n],allExactE2[n];
 	Int_t c=0;	//counter
 
 	//Gets data and puts them into arrays
@@ -48,49 +50,15 @@ void energycomp(){
 
 	//Graph containing particle 1 data
 	TGraph* E1 = new TGraph(n,allCalcE1,allExactE1);
-	E1->SetTitle("Exact Energy vs Calorimeter Energy of Particle 1");
-	E1->GetXaxis()->SetTitle("Calorimeter Energy (keV/c^2)");
-	E1->GetYaxis()->SetTitle("Exact Energy (keV/c^2)");
+	E1->SetTitle("");
+	E1->GetXaxis()->SetTitle("Calorimeter Energy (MeV)");
+	E1->GetYaxis()->SetTitle("Exact Energy (MeV)");
 
-/*
-	//Graph containing particle 2 data
-	TGraph* E2 = new TGraph(n,allCalcE2,allExactE2);
-	E2->SetTitle("Exact Energy vs Calorimeter Energy of Particle 2");
-	E2->GetXaxis()->SetTitle("Calorimeter Energy (keV/c^2)");
-	E2->GetYaxis()->SetTitle("Exact Energy (keV/c^2)");
-*/
 
 	E1->Draw("ap");
-	cv->SaveAs("figs/energycomp1.root");
-	//E1->Print("figs/energycomp1.eps");
-	//cv->Print("figs/energycomp1.png");
+	cv->SaveAs("figs/energy/energycomp2.root");
+	E1->Print("figs/energy/energycomp2.eps");
 
-
-/*
-	//Choice which particle to look at
-	int choice;
-	std::cout<<"Comparing particle 1 or 2: ";
-	std::cin>>choice;
-
-	//Saves and draws the graph that was chosen
-	switch(choice){
-	case 1:
-		E1->Draw("ap");
-		cv->SaveAs("figs/energycomp1.root");
-		cv->Print("figs/energycomp1.eps");
-		cv->Print("figs/energycomp1.png");
-		break;
-	case 2:
-		E2->Draw("ap");
-		cv->SaveAs("figs/energycomp2.root");
-		cv->Print("figs/energycomp2.eps");
-		cv->Print("figs/energycomp2.png");
-		break;
-	default:
-		std::cout<<"Please input 1 or 2"<<std::endl;
-		break;
-	}
-*/
 	quasi.Close();
 	measured.Close();
 }
