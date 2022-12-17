@@ -140,7 +140,7 @@ void missingmass(){
 	//Total number of events
 	int event = 0;
 
-	//Loop though all particles in the dataset
+	//Loop though all particles in the database
 	for(int i=0;i<(int)(data.size()/2);i++){
 		//Checks if ANY particle missed ANY of the detectors
 		if (data[2*i][0] != -1 && data[2*i][1] != -1 && data[2*i+1][0] != -1 && data[2*i+1][1] != -1){

@@ -1,3 +1,0 @@
-/home/local1/eclipse-workspace/p2p/build2/CMakeFiles/rebuild_cache.dir
-/home/local1/eclipse-workspace/p2p/build2/CMakeFiles/p2p.dir
-/home/local1/eclipse-workspace/p2p/build2/CMakeFiles/edit_cache.dir

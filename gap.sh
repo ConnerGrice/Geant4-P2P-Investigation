@@ -7,9 +7,9 @@ do
 	cd build2
 	make
 	./p2p run.mac
+	cd ..
 	root -q missingmass.cpp
 	cp -v figs/missing.root figs/gaps/$suffix.root
-	cd ..
 	echo $suffix
 	((suffix++))
 done

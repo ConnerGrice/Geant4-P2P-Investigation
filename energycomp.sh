@@ -7,9 +7,9 @@ do
 	cd build2
 	make
 	./p2p run.mac
-	root -q energycomp.cpp
-	cp -v figs/energycomp1.root figs/energy/$suffix.root
 	cd ..
+	root -q energycomp.cpp
+	cp -v figs/energycomp.root figs/energy/$suffix.root
 	echo $suffix
 	echo $value
 	((suffix++))
