@@ -49,3 +49,15 @@ This framework was produced by CERN and makes use of [Monte Carlo simulations](h
 **ROOT Analytics**
 
 This is another open-source framework created by CERN for specific use within high energy particle physics. Its primary use is for data analytics. The main feature is the tree-based file system `.root`. These are C++ objects that can be saved and can contain many columns within them.
+
+## Installation
+
+This whole project was done using a [virtual machine](https://indico.cern.ch/event/865808/page/19021-geant4-virtual-machine) provided by CERN, using VMWare. The machine had dependencies already compiled and working.
+
+It seems that this virtual machine is no-longer available for download, so basic dependencies and versions are given below.
+
+Package|Version|Link
+---:|:---:|:---
+Geant4|10.7.2|[Download](https://geant4.web.cern.ch/support/download)
+ROOT Analytics|6.18/04|[Download](https://root.cern/install/)
+CLHEP|**get version**|[Download](https://gitlab.cern.ch/CLHEP/CLHEP)
