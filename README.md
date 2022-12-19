@@ -61,3 +61,27 @@ Package|Version|Link
 Geant4|10.7.2|[Download](https://geant4.web.cern.ch/support/download)
 ROOT Analytics|6.18/04|[Download](https://root.cern/install/)
 CLHEP|**get version**|[Download](https://gitlab.cern.ch/CLHEP/CLHEP)
+
+Once the dependencies are installed, the program can be built and compiled. First, clone this repository into you desired directory:
+
+```console
+$ git clone https://github.com/ConnerGrice/Geant4-P2P-Investigation.git
+```
+
+Once cloned, move into the `build/` directory and build the program using:
+
+```console
+$ cmake -DGeant_DIR=$G4COMP ..
+```
+
+**Note:** `$G4COMP` is a variable set by the virtual machine, the path this variable corresponds to is, `geant4.10.07.p02/lib64/Geaant-10.7.2`, which represents the directory Geant4 is built into.
+
+Once the CMake file have been created, compile the program using:
+
+```console
+$ make
+```
+
+The `p2p.exe` should now be available in your `build/` directory.
+
+## Usage
