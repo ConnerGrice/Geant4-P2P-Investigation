@@ -10,7 +10,7 @@ My University of York Theoretical Physics BSc dissertation and accompanying code
 
 A particle detector was designed to make use of the quasi-free (p,2p) knockout reaction in
 order to probe the observables of protons in the Carbon-12 nucleus and simulated using the
-[Geant4](https://geant4.web.cern.ch/) framework. This report will be beneficial in making design choices at [$R^3B$](https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b), at which a
+[Geant4](https://geant4.web.cern.ch/) framework. This report will be beneficial in making design choices at [R3B](https://www.gsi.de/work/forschung/nustarenna/nustarenna_divisions/kernreaktionen/activities/r3b), at which a
 physical detector is being developed for similar purposes. The detector system is made up of
 two silicon cylindrical layers surrounded by a spherical silicon calorimeter. To investigate the
 proficiency of the detector, the missing mass reconstruction was calculated using the outgoing
