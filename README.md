@@ -2,6 +2,8 @@
 
 My University of York Theoretical Physics BSc dissertation and accompanying code, investigating the optimal detector system for utilising a (p,2p) interaction when determining the proton binding energy within Carbon-12 atoms.
 
+![Detector](./screenshots/detectorview.png)
+
 ## Project Description
 
 ### Dissertation abstract
@@ -21,15 +23,13 @@ of 0.01 mm or less, and a calorimeter of 160 cm, giving a detector with an 85% e
 
 The main purpose of this program is to simulate how 2 protons generated during the (p,2p) reaction move through materials. Specific particle properties are recorded in a digitised way to simulate real-world detectors. This data is then used to calculate the protons momentum, and then used to calculate the binding energy of the Carbon-12 atom the protons originated from (analogous to the missing mass).
 
-[Exact missing mass image here]
+![Exact mass](./screenshots/ExactMass.svg)
 
 The main program can either be viewed within a visualiser, or multiple simulations can be carried out consecutively within the terminal.
 
-[Visualiser image here]
-
 The simulations will result in a data file being produced, that can be converted into a histogram or scatter plots.
 
-[Punch through plot image here]
+![Scatter Plot](./screenshots/energycomp.svg)
 
 Multiple scripts are used to automate the simulation and experimentation workflow. Through these experiments, different detector parameters can be fine tuned to get the best results. These parameters include:
 
@@ -94,6 +94,10 @@ Dimension|Description
 `INNERRAD`| The radius of the inner cylinder.
 `CALTHICKNESS`| The thickness of the spherical calorimeter surrounding the detector.
 
+![Barrel](./screenshots/Barrel-view.svg)
+
+![Side](./screenshots/Side-view.svg)
+
 The program can be used in multiple different ways. Carrying out a [single run](#single-run) using the visualiser; a [single experiment](#single-experiment), which consists of 100240 runs; or [multiple experiments](#multiple-experiments), where a parameter is changed according to a specific [script](#scripts).
 
 ### Single Run
@@ -130,6 +134,8 @@ Object Name|Description
 `Outer`| The outer, larger detector cylinder.
 
 More visualiser commands can be found [here](http://www.hep.ph.ic.ac.uk/~yoshiu/COMET/comet_g4HTMLdoc/_vis_.html).
+
+![Visualiser](./sreenshots/Screenshot from 2022-12-29 19-06-33.png)
 
 Once the visualiser is running, generate a pair of particles using the command `/run/beamOn 1`. This will use the data from the first entry in the `quasi.root` file provided. Each proceeding run of the command will use the next entry in the file.  
 
