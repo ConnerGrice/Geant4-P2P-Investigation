@@ -176,7 +176,7 @@ A `.png` image along with a `.eps` vector image can be generated. More informati
 
 ### Multiple Experiments
 
-The program can be run like this using the one of many shell scripts provided. All of these scripts act in vary similar ways. They carry out an experiment, change some parameter, put the results into a different directory, then run the experiment again.
+The program can be run like this using the one of many [shell scripts](#experimentation-scripts) provided. All of these scripts act in very similar ways. They carry out an experiment, change some parameter, put the results into a different directory, then run the experiment again.
 
 These scripts can be run using:
 
