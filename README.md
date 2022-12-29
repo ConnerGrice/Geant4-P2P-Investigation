@@ -135,8 +135,6 @@ Object Name|Description
 
 More visualiser commands can be found [here](http://www.hep.ph.ic.ac.uk/~yoshiu/COMET/comet_g4HTMLdoc/_vis_.html).
 
-![Visualiser](./sreenshots/Screenshot from 2022-12-29 19-06-33.png)
-
 Once the visualiser is running, generate a pair of particles using the command `/run/beamOn 1`. This will use the data from the first entry in the `quasi.root` file provided. Each proceeding run of the command will use the next entry in the file.  
 
 ### Single Experiment
