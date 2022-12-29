@@ -56,7 +56,7 @@ It seems that this virtual machine is no-longer available for download, so basic
 ---:|:---:|:---
 Geant4|`10.7.2`|[Download](https://geant4.web.cern.ch/support/download)
 ROOT Analytics|`6.18/04`|[Download](https://root.cern/install/)
-CLHEP|`**get version**`|[Download](https://gitlab.cern.ch/CLHEP/CLHEP)
+CLHEP|`2.4.4.0`|[Download](https://gitlab.cern.ch/CLHEP/CLHEP)
 
 Once the dependencies are installed, the program can be built and compiled. First, clone this repository into you desired directory:
 
