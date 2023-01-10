@@ -2,8 +2,6 @@
 
 My University of York Theoretical Physics BSc dissertation and accompanying code, investigating the optimal detector system for utilising a (p,2p) interaction when determining the proton binding energy within Carbon-12 atoms.
 
-![Detector](./screenshots/detectorview.png)
-
 ## Project Description
 
 ### Dissertation abstract
@@ -18,6 +16,8 @@ proton’s 4-momentum vectors. Dimensions tested are the length of the cylinders
 between them and their thickness, as well as the thickness of the calorimeter. An optimal
 detector for this situation would be at least 80 cm long, have a gap of 3 cm, a layer thickness
 of 0.01 mm or less, and a calorimeter of 160 cm, giving a detector with an 85% efficiency. - [Link to full paper](ConnerGriceFinalDissertation.pdf)
+
+![Detector](./screenshots/detectorview.png)
 
 ### Program overview
 
