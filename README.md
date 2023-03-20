@@ -48,9 +48,9 @@ ROOT Analytics is another open-source framework created by CERN for specific use
 
 ## Installation
 
-This whole project was done using a [virtual machine](https://indico.cern.ch/event/865808/page/19021-geant4-virtual-machine) provided by CERN, using VMWare. The machine had dependencies already compiled and working.
+This whole project was done using a [virtual machine](https://extra.lp2ib.in2p3.fr/G4/download/). The machine had dependencies already compiled and working.
 
-It seems that this virtual machine is no-longer available for download, so basic dependencies and versions are given below.
+You can build Geant4 on your own linux system using these requirments:
 
 |Package|Version|Link|
 ---:|:---:|:---
